@@ -1,0 +1,4 @@
+metric,bifolio_adj_rate_mean,bifolio_adj_rate_sd,bifolio_adj_rate_max,random_baseline,lift_over_baseline_mean,seriation_cost_mean,n_folios,n_bifolios,n_restarts
+hellinger,0.117574,0.018664,0.148515,0.009803,0.107771,36.760782,102,52,8
+js,0.134901,0.025347,0.178218,0.009803,0.125098,32.025006,102,52,8
+l1,0.168317,0.016736,0.19802,0.009803,0.158514,28.169399,102,52,8
