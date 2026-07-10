@@ -26,8 +26,8 @@ level. The VMS’s observed rate of bifolium-conjoint folia becoming adjacent
 pairs within a topic-distance seriation is most consistent with the
 VMS being made of entirely singulions. To assist future codicological
 studies, I also propose a bifolium-level reordering of the entire VMS
-that replicates a previously proposed singulion-based
-rearrangement of the Stars and Biological sections.
+that replicates previously proposed singulion-based
+rearrangements of the Stars and Biological sections.
 
 # License and copyright
 
