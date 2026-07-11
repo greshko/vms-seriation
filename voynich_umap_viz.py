@@ -191,7 +191,7 @@ def make_svg(
         ax.scatter(xs[sr], ys[sr],
                    s=START_MARKER_SIZE, color=cmap(0.0),
                    marker="*", zorder=5, linewidths=0,
-                   label=f"Start (bifolio {start_bg})")
+                   label=f"Start (bifolium {start_bg})")
 
     # --- End marker ---
     end_bg = valid_ordering[-1]
@@ -200,7 +200,7 @@ def make_svg(
         ax.scatter(xs[er], ys[er],
                    s=START_MARKER_SIZE * 0.7, color=cmap(1.0),
                    marker="s", zorder=5, linewidths=0,
-                   label=f"End (bifolio {end_bg})")
+                   label=f"End (bifolium {end_bg})")
 
     # --- Colorbar as gradient reference ---
     sm = cm.ScalarMappable(cmap=cmap, norm=mcolors.Normalize(vmin=1, vmax=len(valid_ordering)))
@@ -300,7 +300,7 @@ def main() -> None:
             umap_coords = embedding,
             bifolio_ids = bifolio_ids,
             ordering    = original_order,
-            title       = f"Voynich bifolio seriation — original ordering  (K={K})",
+            title       = f"VMS bifolium sequence — original ordering  (K={K})",
             out_path    = OUTPUT_DIR / f"K{K}_original.svg",
         )
 
@@ -310,7 +310,7 @@ def main() -> None:
             umap_coords = embedding,
             bifolio_ids = bifolio_ids,
             ordering    = consensus_order,
-            title       = f"Voynich bifolio seriation — consensus ordering  (K={K})",
+            title       = f"VMS bifolium sequence — consensus seriation  (K={K})",
             out_path    = OUTPUT_DIR / f"K{K}_consensus.svg",
         )
 
