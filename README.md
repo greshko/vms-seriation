@@ -9,25 +9,25 @@ Voynich Manuscript 2026.
   
 ## Abstract
 
-Adding to the enigmatic codex’s mysteries, the binding of the
+Adding to the manuscript’s mysteries, the binding of the
 15th-century Voynich Manuscript (VMS) probably does not reflect its
-original structure. Recently, a computational analysis of the VMS’s
-Biological (ff. 75-84) and Stars (ff. 103–116) sections suggested that the
-VMS may have been structured originally as consecutive loose bifolia
-that each acted as individual quires (singulions). In this work, I test
-this hypothesis by running both the VMS and synthetic collations of known texts
+originally intended page ordering. Recently, a computational analysis of the VMS’s
+Biological (ff. 75–84) and Stars (ff. 103–116) sections suggested that the VMS
+may have been structured originally as consecutive loose bifolia that each acted
+as individual quires (singulions). In this work, I test this hypothesis
+by running both the VMS and synthetic collations of known texts
 through an algorithm that treats seriation of a manuscript’s
-folia as a Hamiltonian path problem in latent topic space, based on
+folia as a Hamiltonian path optimization problem in latent topic space, based on
 an ensemble of nonnegative matrix factorization topic modeling runs.
-After establishing a baseline for the algorithm’s performance
-by seriating synthetic collations of diverse medieval and classical
+After baselining the algorithm’s performance by seriating
+synthetic collations of diverse medieval and classical
 texts while varying quire structures, I seriate the VMS at the folio
-level. The VMS’s observed rate of bifolium-conjoint folia becoming adjacent
+level. The VMS’s observed rate of conjoint folia becoming adjacent
 pairs within a topic-distance seriation is most consistent with the
-VMS being made of entirely singulions. To assist future codicological
-studies, I also propose a bifolium-level reordering of the entire VMS
-that replicates previously proposed singulion-based
-rearrangements of the Biological and sections.
+VMS being made of entirely singulions. To that end, I also propose
+a bifolium-level reordering of the entire VMS that
+converges with previously proposed all-singulion orderings
+of the Biological and Stars sections.
 
 # License and copyright
 
