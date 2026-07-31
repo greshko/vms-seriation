@@ -1,10 +1,9 @@
 """
 violin.py
 ===================================
-Standalone significance-testing + plotting script that performs the
+Standalone significance-testing + plotting script that performs a
 one-point-per-source-text analysis: every synthetic-collation
-run is first collapsed to a single median value per source text, so the
-statistical unit is the DOCUMENT, not the run.
+run is first collapsed to a single median value per source text.
 
 
 WHAT IT PRODUCES
@@ -26,8 +25,7 @@ WHAT IT PRODUCES
          a) EXACT RANK TEST (nonparametric, no distributional assumption):
             treats VMS + the n baseline texts as n+1 exchangeable draws and
             asks how extreme VMS's rank is. Exact, but bounded below by
-            1/(n+1) -- it cannot express "less likely than 1 in 46" even if
-            the true effect is much larger.
+            1/(n+1).
          b) EMPIRICAL TAIL FRACTION: the fraction of the n observed texts
             at least as extreme as VMS. Simple, but same floor-at-zero
             problem when VMS exceeds every observed text (all pairwise
@@ -52,10 +50,9 @@ WHAT IT PRODUCES
             SAME selected family (chosen once per group from the full
             sample, not re-selected per resample) on bootstrap resamples
             of the n texts and reporting the resulting percentile interval.
-            This is the piece that can express "less likely than 1-in-46"
-            and give a sense of just how far outside the distribution VMS
-            sits, at the cost of assuming *some* parametric shape is a
-            reasonable model for these values -- flagged explicitly so it
+            This is the piece that can give a sense of just how far outside
+	    the distribution VMS sits, at the cost of assuming *some*
+	    parametric shape is reasonable for these values -- flagged so it
             isn't over-trusted, and the AIC table for every family is
             written out alongside it so the choice can be audited.
 6. distribution_fit_comparison.csv

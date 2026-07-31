@@ -1,11 +1,11 @@
 """
 sweep.py
 ========
-Parameter sweep over synthetic foliation configurations.
+Parameter sweep over synthetic collation configurations.
 
 For each combination of (source_text, words_per_folio, bifolios_per_quire,
 distance_metric), this script:
-  1. Generates a synthetic foliation via foliation.py
+  1. Generates a synthetic collation via foliation.py
   2. Fits an NMF ensemble (K = 5–15, multiple seeds)
   3. Builds a weighted pairwise distance matrix
   4. Optimises a seriation order via SA + Or-opt + 2-opt
