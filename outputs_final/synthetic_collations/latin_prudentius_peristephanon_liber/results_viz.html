@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bifolio Adjacency Rate — latin_prudentius_peristephanon_liber</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #fafafa;
+    color: #222;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  p.sub { color: #555; font-size: 0.9rem; margin-top: 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  canvas { width: 100% !important; }
+  .legend {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+</style>
+</head>
+<body>
+<h1>Bifolio Adjacency Rate — latin_prudentius_peristephanon_liber</h1>
+<p class="sub">
+  Mean adjacency rate (± 1 SD across restarts) vs bifolios per quire,
+  by distance metric. Dashed line = random baseline.
+</p>
+
+<div class="legend">
+  <span class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Hellinger</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#16a34a"></span>JS divergence</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span>L1</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#aaa; opacity:0.6"></span>Random baseline</span>
+</div>
+
+<div class="grid" id="charts"></div>
+
+<script>
+const RAW = [{"words_per_folio":200,"bifolios_per_quire":1,"metric":"hellinger","bifolio_adj_rate_mean":0.032671,"bifolio_adj_rate_sd":0.007283,"bifolio_adj_rate_max":0.045455,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.021307,"seriation_cost_mean":41.856935,"n_folios":89,"n_quires":45,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":1,"metric":"js","bifolio_adj_rate_mean":0.039773,"bifolio_adj_rate_sd":0.012148,"bifolio_adj_rate_max":0.056818,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.028409,"seriation_cost_mean":35.415579,"n_folios":89,"n_quires":45,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":1,"metric":"l1","bifolio_adj_rate_mean":0.039773,"bifolio_adj_rate_sd":0.01718,"bifolio_adj_rate_max":0.056818,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.028409,"seriation_cost_mean":37.636766,"n_folios":89,"n_quires":45,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":2,"metric":"hellinger","bifolio_adj_rate_mean":0.044034,"bifolio_adj_rate_sd":0.024626,"bifolio_adj_rate_max":0.090909,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.032671,"seriation_cost_mean":41.562968,"n_folios":89,"n_quires":23,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":2,"metric":"js","bifolio_adj_rate_mean":0.06392,"bifolio_adj_rate_sd":0.020088,"bifolio_adj_rate_max":0.079545,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.052557,"seriation_cost_mean":35.93775,"n_folios":89,"n_quires":23,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":2,"metric":"l1","bifolio_adj_rate_mean":0.052557,"bifolio_adj_rate_sd":0.021848,"bifolio_adj_rate_max":0.079545,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.041193,"seriation_cost_mean":36.967784,"n_folios":89,"n_quires":23,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":3,"metric":"hellinger","bifolio_adj_rate_mean":0.012784,"bifolio_adj_rate_sd":0.004017,"bifolio_adj_rate_max":0.022727,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.00142,"seriation_cost_mean":41.727886,"n_folios":89,"n_quires":15,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":3,"metric":"js","bifolio_adj_rate_mean":0.015625,"bifolio_adj_rate_sd":0.014801,"bifolio_adj_rate_max":0.034091,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.004261,"seriation_cost_mean":36.408828,"n_folios":89,"n_quires":15,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":3,"metric":"l1","bifolio_adj_rate_mean":0.012784,"bifolio_adj_rate_sd":0.009483,"bifolio_adj_rate_max":0.022727,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.00142,"seriation_cost_mean":36.712933,"n_folios":89,"n_quires":15,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":4,"metric":"hellinger","bifolio_adj_rate_mean":0.038352,"bifolio_adj_rate_sd":0.017113,"bifolio_adj_rate_max":0.056818,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.026989,"seriation_cost_mean":41.551107,"n_folios":89,"n_quires":12,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":4,"metric":"js","bifolio_adj_rate_mean":0.039773,"bifolio_adj_rate_sd":0.006074,"bifolio_adj_rate_max":0.045455,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.028409,"seriation_cost_mean":36.104903,"n_folios":89,"n_quires":12,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":4,"metric":"l1","bifolio_adj_rate_mean":0.038352,"bifolio_adj_rate_sd":0.017113,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.026989,"seriation_cost_mean":37.445374,"n_folios":89,"n_quires":12,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":5,"metric":"hellinger","bifolio_adj_rate_mean":0.025568,"bifolio_adj_rate_sd":0.010073,"bifolio_adj_rate_max":0.034091,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.014204,"seriation_cost_mean":41.263455,"n_folios":89,"n_quires":9,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":5,"metric":"js","bifolio_adj_rate_mean":0.026989,"bifolio_adj_rate_sd":0.008455,"bifolio_adj_rate_max":0.034091,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.015625,"seriation_cost_mean":36.117541,"n_folios":89,"n_quires":9,"n_bifolios":45,"n_restarts":8},{"words_per_folio":200,"bifolios_per_quire":5,"metric":"l1","bifolio_adj_rate_mean":0.019886,"bifolio_adj_rate_sd":0.013238,"bifolio_adj_rate_max":0.045455,"random_baseline_mean":0.011364,"lift_over_baseline_mean":0.008523,"seriation_cost_mean":37.214365,"n_folios":89,"n_quires":9,"n_bifolios":45,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":1,"metric":"hellinger","bifolio_adj_rate_mean":0.099432,"bifolio_adj_rate_sd":0.031997,"bifolio_adj_rate_max":0.136364,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.076705,"seriation_cost_mean":21.339361,"n_folios":45,"n_quires":23,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":1,"metric":"js","bifolio_adj_rate_mean":0.09375,"bifolio_adj_rate_sd":0.030823,"bifolio_adj_rate_max":0.136364,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.071023,"seriation_cost_mean":18.31175,"n_folios":45,"n_quires":23,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":1,"metric":"l1","bifolio_adj_rate_mean":0.099432,"bifolio_adj_rate_sd":0.024106,"bifolio_adj_rate_max":0.136364,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.076705,"seriation_cost_mean":19.164243,"n_folios":45,"n_quires":23,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":2,"metric":"hellinger","bifolio_adj_rate_mean":0.085227,"bifolio_adj_rate_sd":0.02913,"bifolio_adj_rate_max":0.136364,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.0625,"seriation_cost_mean":21.481194,"n_folios":45,"n_quires":12,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":2,"metric":"js","bifolio_adj_rate_mean":0.099432,"bifolio_adj_rate_sd":0.020821,"bifolio_adj_rate_max":0.136364,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.076705,"seriation_cost_mean":18.440618,"n_folios":45,"n_quires":12,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":2,"metric":"l1","bifolio_adj_rate_mean":0.105114,"bifolio_adj_rate_sd":0.024106,"bifolio_adj_rate_max":0.159091,"random_baseline_mean":0.022727,"lift_over_baseline_mean":0.082386,"seriation_cost_mean":19.481527,"n_folios":45,"n_quires":12,"n_bifolios":23,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":3,"metric":"hellinger","bifolio_adj_rate_mean":0.082386,"bifolio_adj_rate_sd":0.026994,"bifolio_adj_rate_max":0.113636,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.060692,"seriation_cost_mean":20.981802,"n_folios":45,"n_quires":8,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":3,"metric":"js","bifolio_adj_rate_mean":0.082386,"bifolio_adj_rate_sd":0.024106,"bifolio_adj_rate_max":0.113636,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.060692,"seriation_cost_mean":18.261477,"n_folios":45,"n_quires":8,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":3,"metric":"l1","bifolio_adj_rate_mean":0.090909,"bifolio_adj_rate_sd":0.021041,"bifolio_adj_rate_max":0.113636,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.069215,"seriation_cost_mean":19.159753,"n_folios":45,"n_quires":8,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":4,"metric":"hellinger","bifolio_adj_rate_mean":0.051137,"bifolio_adj_rate_sd":0.010521,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.029442,"seriation_cost_mean":21.087026,"n_folios":45,"n_quires":6,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":4,"metric":"js","bifolio_adj_rate_mean":0.056819,"bifolio_adj_rate_sd":0.012148,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.035124,"seriation_cost_mean":18.454294,"n_folios":45,"n_quires":6,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":4,"metric":"l1","bifolio_adj_rate_mean":0.053978,"bifolio_adj_rate_sd":0.011762,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.021694,"lift_over_baseline_mean":0.032283,"seriation_cost_mean":19.045203,"n_folios":45,"n_quires":6,"n_bifolios":24,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":5,"metric":"hellinger","bifolio_adj_rate_mean":0.028409,"bifolio_adj_rate_sd":0.010521,"bifolio_adj_rate_max":0.045455,"random_baseline_mean":0.020661,"lift_over_baseline_mean":0.007748,"seriation_cost_mean":21.1256,"n_folios":45,"n_quires":5,"n_bifolios":25,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":5,"metric":"js","bifolio_adj_rate_mean":0.028409,"bifolio_adj_rate_sd":0.020146,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.020661,"lift_over_baseline_mean":0.007748,"seriation_cost_mean":18.520071,"n_folios":45,"n_quires":5,"n_bifolios":25,"n_restarts":8},{"words_per_folio":400,"bifolios_per_quire":5,"metric":"l1","bifolio_adj_rate_mean":0.028409,"bifolio_adj_rate_sd":0.023525,"bifolio_adj_rate_max":0.068182,"random_baseline_mean":0.020661,"lift_over_baseline_mean":0.007748,"seriation_cost_mean":19.15189,"n_folios":45,"n_quires":5,"n_bifolios":25,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":1,"metric":"hellinger","bifolio_adj_rate_mean":0.116379,"bifolio_adj_rate_sd":0.031591,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.080707,"seriation_cost_mean":15.352525,"n_folios":30,"n_quires":15,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":1,"metric":"js","bifolio_adj_rate_mean":0.107759,"bifolio_adj_rate_sd":0.034173,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.072087,"seriation_cost_mean":13.210271,"n_folios":30,"n_quires":15,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":1,"metric":"l1","bifolio_adj_rate_mean":0.107759,"bifolio_adj_rate_sd":0.034173,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.072087,"seriation_cost_mean":13.913981,"n_folios":30,"n_quires":15,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":2,"metric":"hellinger","bifolio_adj_rate_mean":0.150862,"bifolio_adj_rate_sd":0.017847,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.033294,"lift_over_baseline_mean":0.117568,"seriation_cost_mean":15.152602,"n_folios":30,"n_quires":8,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":2,"metric":"js","bifolio_adj_rate_mean":0.159483,"bifolio_adj_rate_sd":0.017847,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.033294,"lift_over_baseline_mean":0.126189,"seriation_cost_mean":13.005705,"n_folios":30,"n_quires":8,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":2,"metric":"l1","bifolio_adj_rate_mean":0.133621,"bifolio_adj_rate_sd":0.022099,"bifolio_adj_rate_max":0.172414,"random_baseline_mean":0.033294,"lift_over_baseline_mean":0.100327,"seriation_cost_mean":14.041034,"n_folios":30,"n_quires":8,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":3,"metric":"hellinger","bifolio_adj_rate_mean":0.051724,"bifolio_adj_rate_sd":0.018432,"bifolio_adj_rate_max":0.068966,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.016052,"seriation_cost_mean":15.34909,"n_folios":30,"n_quires":5,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":3,"metric":"js","bifolio_adj_rate_mean":0.038793,"bifolio_adj_rate_sd":0.012192,"bifolio_adj_rate_max":0.068966,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.003121,"seriation_cost_mean":13.288679,"n_folios":30,"n_quires":5,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":3,"metric":"l1","bifolio_adj_rate_mean":0.038793,"bifolio_adj_rate_sd":0.012192,"bifolio_adj_rate_max":0.068966,"random_baseline_mean":0.035672,"lift_over_baseline_mean":0.003121,"seriation_cost_mean":13.779436,"n_folios":30,"n_quires":5,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":4,"metric":"hellinger","bifolio_adj_rate_mean":0.034483,"bifolio_adj_rate_sd":0.031925,"bifolio_adj_rate_max":0.068966,"random_baseline_mean":0.033294,"lift_over_baseline_mean":0.001189,"seriation_cost_mean":15.439406,"n_folios":30,"n_quires":4,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":4,"metric":"js","bifolio_adj_rate_mean":0.012931,"bifolio_adj_rate_sd":0.017847,"bifolio_adj_rate_max":0.034483,"random_baseline_mean":0.033294,"lift_over_baseline_mean":-0.020363,"seriation_cost_mean":13.142701,"n_folios":30,"n_quires":4,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":4,"metric":"l1","bifolio_adj_rate_mean":0.025862,"bifolio_adj_rate_sd":0.015963,"bifolio_adj_rate_max":0.034483,"random_baseline_mean":0.033294,"lift_over_baseline_mean":-0.007432,"seriation_cost_mean":13.72585,"n_folios":30,"n_quires":4,"n_bifolios":16,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":5,"metric":"hellinger","bifolio_adj_rate_mean":0.0,"bifolio_adj_rate_sd":0.0,"bifolio_adj_rate_max":0.0,"random_baseline_mean":0.035672,"lift_over_baseline_mean":-0.035672,"seriation_cost_mean":15.255323,"n_folios":30,"n_quires":3,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":5,"metric":"js","bifolio_adj_rate_mean":0.021552,"bifolio_adj_rate_sd":0.017847,"bifolio_adj_rate_max":0.034483,"random_baseline_mean":0.035672,"lift_over_baseline_mean":-0.01412,"seriation_cost_mean":13.094206,"n_folios":30,"n_quires":3,"n_bifolios":15,"n_restarts":8},{"words_per_folio":600,"bifolios_per_quire":5,"metric":"l1","bifolio_adj_rate_mean":0.021552,"bifolio_adj_rate_sd":0.025656,"bifolio_adj_rate_max":0.068966,"random_baseline_mean":0.035672,"lift_over_baseline_mean":-0.01412,"seriation_cost_mean":14.15987,"n_folios":30,"n_quires":3,"n_bifolios":15,"n_restarts":8}];
+
+const METRICS = ["hellinger", "js", "l1"];
+const COLORS  = { hellinger: "#2563eb", js: "#16a34a", l1: "#dc2626" };
+const WPF_VALUES = [...new Set(RAW.map(d => d.words_per_folio))].sort((a,b) => a-b);
+const BPQ_VALUES = [...new Set(RAW.map(d => d.bifolios_per_quire))].sort((a,b) => a-b);
+
+function getRows(wpf, metric) {
+  return BPQ_VALUES.map(bpq => {
+    const rows = RAW.filter(d =>
+      d.words_per_folio === wpf &&
+      d.bifolios_per_quire === bpq &&
+      d.metric === metric
+    );
+    if (!rows.length) return { mean: null, sd: null, baseline: null };
+    const vals = rows.map(r => r.bifolio_adj_rate_mean);
+    const sds  = rows.map(r => r.bifolio_adj_rate_sd);
+    return {
+      mean:     vals[0],
+      sd:       sds[0],
+      baseline: rows[0].random_baseline_mean,
+    };
+  });
+}
+
+const container = document.getElementById("charts");
+
+WPF_VALUES.forEach(wpf => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `<h3 style="margin:0 0 0.75rem;font-size:1rem">
+    ${wpf} words per folio</h3><canvas id="chart-${wpf}"></canvas>`;
+  container.appendChild(card);
+
+  const datasets = [];
+
+  // Baseline (same for all metrics at given wpf, bpq)
+  const baselineVals = BPQ_VALUES.map(bpq => {
+    const row = RAW.find(d =>
+      d.words_per_folio === wpf && d.bifolios_per_quire === bpq
+    );
+    return row ? row.random_baseline_mean : null;
+  });
+
+  datasets.push({
+    label: "Random baseline",
+    data: baselineVals,
+    borderColor: "#bbb",
+    borderDash: [5, 4],
+    borderWidth: 1.5,
+    pointRadius: 0,
+    fill: false,
+    tension: 0.3,
+  });
+
+  METRICS.forEach(metric => {
+    const rows = getRows(wpf, metric);
+    datasets.push({
+      label: metric,
+      data: rows.map(r => r.mean),
+      borderColor: COLORS[metric],
+      backgroundColor: COLORS[metric] + "22",
+      borderWidth: 2,
+      pointRadius: 4,
+      fill: false,
+      tension: 0.3,
+    });
+  });
+
+  new Chart(document.getElementById(`chart-${wpf}`), {
+    type: "line",
+    data: { labels: BPQ_VALUES.map(String), datasets },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { mode: "index", intersect: false },
+      },
+      scales: {
+        x: {
+          title: { display: true, text: "Bifolios per quire" },
+        },
+        y: {
+          title: { display: true, text: "Bifolio adjacency rate" },
+          min: 0,
+          suggestedMax: 0.3,
+        },
+      },
+    },
+  });
+});
+</script>
+</body>
+</html>

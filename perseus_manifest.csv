@@ -1,0 +1,401 @@
+repo,path,language,author,title,word_count,included,reason
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi003/phi0959.phi003.perseus-lat2.xml,Latin,P. Ovidius Naso,Medicamina faciei femineae,613,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi011/phi1017.phi011.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Apocolocyntosis,2774,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa017/stoa0045.stoa017.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",,174,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa028/stoa0045.stoa028.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Technopaegnion,1481,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa021/stoa0045.stoa021.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Ordo Urbium Nobilium,1061,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa026/stoa0045.stoa026.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Precationes,468,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa019/stoa0045.stoa019.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Mosella,3252,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa027/stoa0045.stoa027.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Versus Paschales Pro Augusto Dicti,194,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa018/stoa0045.stoa018.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Ludus Septem Sapientum,1333,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa020/stoa0045.stoa020.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Oratio Consulis Ausonii Versibus Rhopalicis,214,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa016/stoa0045.stoa016.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Epistularum,810,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa002/stoa0045.stoa002.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Ausonii de XII Caesaribus per Suetonium Tranquillum scriptis,909,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa005/stoa0045.stoa005.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Cupido cruciatur,743,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa004/stoa0045.stoa004.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Commemoratio professorum Burdigalensium,2745,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa003/stoa0045.stoa003.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Cento Nuptialis,1234,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa013/stoa0045.stoa013.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Genethliacon ad Ausonium Nepotem,179,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa025/stoa0045.stoa025.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Praefatiunculae,564,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa022/stoa0045.stoa022.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Parentalia,2730,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa012/stoa0045.stoa012.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Epitaphia heroum qui bello Troico interfuerunt,1285,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa015/stoa0045.stoa015.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Griphus Ternarii numeri,1075,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa008/stoa0045.stoa008.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Ephemeris id est totius diei negotium,1295,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa006/stoa0045.stoa006.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",De Herediolo,248,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa001/stoa0045.stoa001.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",De Bissula,308,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa007/stoa0045.stoa007.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Eclogarum Liber,2884,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa009/stoa0045.stoa009.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Epicedion in Patrem,491,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa010/stoa0089.stoa010.perseus-lat2.xml,Latin,Claudian,Panegyricus de tertio consulatu Honorii Augusti,1383,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa011/stoa0089.stoa011.perseus-lat2.xml,Latin,Claudian,Panegyricus de quarto consulatu Honorii Augusti,3963,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa002/stoa0089.stoa002.perseus-lat2.xml,Latin,Claudian,de bello Gildonico,3165,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa014/stoa0089.stoa014.perseus-lat2.xml,Latin,Claudian,Panegyricus dictus Probino et Olybrio consulibus,1702,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa013/stoa0089.stoa013.perseus-lat2.xml,Latin,Claudian,Panegyricus dictus Manlio Theodoro consuli,2152,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa006/stoa0089.stoa006.perseus-lat2.xml,Latin,Claudian,Epithalamium de nuptiis Honorii Augusti,2188,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa007/stoa0089.stoa007.perseus-lat2.xml,Latin,Claudian,Fescinnina de nuptiis Honorii Augusti,548,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi019/phi0474.phi019.perseus-lat2.xml,Latin,M. Tullius Cicero,Cum Senatui Gratias Egit,2628,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi026/phi0474.phi026.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro L. Cornelio Balbo,3880,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi045/phi0474.phi045.perseus-lat1.xml,Latin,M. Tullius Cicero,Academica,1545,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi018/phi0474.phi018.perseus-lat2.xml,Latin,M. Tullius Cicero,Cum Populo Gratias Egit,1450,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi029/phi0474.phi029.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro M. Scauro,1953,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi016/phi0474.phi016.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Archia Poeta,1273,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi033/phi0474.phi033.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Q. Ligario,1898,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi034/phi0474.phi034.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Rege Deiotaro Ad. C. Caesarem,2126,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi004/phi0474.phi004.perseus-lat2.xml,Latin,M. Tullius Cicero,Divinatio in Q. Caecilium,3853,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi032/phi0474.phi032.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro M. Marcello,1426,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi025/phi0474.phi025.perseus-lat2.xml,Latin,M. Tullius Cicero,De Provinciis Consularibus In Senatu,3338,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi023/phi0474.phi023.perseus-lat2.xml,Latin,M. Tullius Cicero,In P. Vatinium testem interrogatio,2112,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi012/phi0474.phi012.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro C. Rabirio Perduellionis Reo Ad Quirites,3556,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi015/phi0474.phi015.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro P. Sulla,3930,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi041/phi0474.phi041.perseus-lat1.xml,Latin,M. Tullius Cicero,De Optimo Genere Oratorum,826,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi006/phi0474.phi006.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro M. Tullio,2300,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi053/phi0474.phi053.perseus-lat2.xml,Latin,M. Tullius Cicero,De Divinatione,26988,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi007/phi0474.phi007.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro M. Fonteio,2255,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi009/phi0474.phi009.perseus-lat2.xml,Latin,M. Tullius Cicero,De Imperio Cn. Pompei Ad Quirites,2911,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0836/phi002/phi0836.phi002.perseus-lat5.xml,Latin,Celsus,De Medicina,92063,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0836/phi002/phi0836.phi002.perseus-lat4.xml,Latin,Celsus,De Medicina,102513,False,superseded_by_longer_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa003/stoa0238.stoa003.perseus-lat2.xml,Latin,Prudentius,Praefatio,235,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa008/stoa0238.stoa008.perseus-lat2.xml,Latin,Prudentius,Dittochaeon,1395,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa009/stoa0238.stoa009.perseus-lat2.xml,Latin,Prudentius,Epilogus,136,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi010/phi2331.phi010.perseus-lat2.xml,Latin,,Severus,3811,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi028/phi2331.phi028.perseus-lat2.xml,Latin,,Probus,3671,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi021/phi2331.phi021.perseus-lat2.xml,Latin,,Maximus et Balbinus,2850,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi027/phi2331.phi027.perseus-lat2.xml,Latin,,Tacitus,2658,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi029/phi2331.phi029.perseus-lat2.xml,Latin,,"Firmus Saturninus, Proculus et Bonosus",1987,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi016/phi2331.phi016.perseus-lat2.xml,Latin,,Diadumenus Antoninus,1483,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi011/phi2331.phi011.perseus-lat2.xml,Latin,,Pescennius Niger,2093,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi002/phi2331.phi002.perseus-lat2.xml,Latin,,Helius,1281,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi005/phi2331.phi005.perseus-lat2.xml,Latin,,Verus,1749,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi003/phi2331.phi003.perseus-lat2.xml,Latin,,Antoninus Pius,2025,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi014/phi2331.phi014.perseus-lat2.xml,Latin,,Antoninus Geta,1088,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi013/phi2331.phi013.perseus-lat2.xml,Latin,,Antoninus Caracallus,1813,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi025/phi2331.phi025.perseus-lat2.xml,Latin,,Divus Claudius,2488,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi022/phi2331.phi022.perseus-lat2.xml,Latin,,Valeriani Duo,901,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi023/phi2331.phi023.perseus-lat2.xml,Latin,,Gallieni Duo,2920,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi012/phi2331.phi012.perseus-lat2.xml,Latin,,Clodius Albinus,2238,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi015/phi2331.phi015.perseus-lat2.xml,Latin,,Opilius Macrinus,2281,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi008/phi2331.phi008.perseus-lat2.xml,Latin,,Helvius Pertinax,2178,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi030/phi2331.phi030.perseus-lat2.xml,Latin,,Carus et Carinus et Numerianus,2129,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi006/phi2331.phi006.perseus-lat2.xml,Latin,,Avidius Cassius,2208,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi007/phi2331.phi007.perseus-lat2.xml,Latin,,Commodus Antoninus,3072,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi009/phi2331.phi009.perseus-lat2.xml,Latin,,Didius Julianus,1375,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa028/stoa0058.stoa028.perseus-lat1.xml,Latin,Boethius,Utrum Pater Et Filius Ac Spiritus Sanctus De Divinitate Substantialiter Praedicentur Liber,563,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa003/stoa0058.stoa003.perseus-lat1.xml,Latin,Boethius,"Quomodo Substantiae in Eo Quod Sint Bonae Sint Cum Non Sint Substantialia
+               Bona",1392,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa025/stoa0058.stoa025.perseus-lat1.xml,Latin,Boethius,Quomodo Trinitas Unus Deus Ac Non Tres Dii (De Trinitate),2942,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa006/stoa0058.stoa006.perseus-lat1.xml,Latin,Boethius,De Fide Catholica,1931,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa011/stoa0255.stoa011.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Otio,1800,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa012/stoa0255.stoa012.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Providentia,3882,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0972/phi001f/phi0972.phi001f.perseus-lat1.xml,Latin,Petronius,Fragments,825,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0972/phi001p/phi0972.phi001p.perseus-lat1.xml,Latin,Petronius,Poems,1452,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0972/phi001/phi0972.phi001.perseus-lat2.xml,Latin,Petronius,Satyricon,21784,False,superseded_by_longer_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1014/phi004/phi1014.phi004.perseus-lat1.xml,Latin,Seneca the Elder,Fragmenta,138,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0040/stoa011/stoa0040.stoa011.perseus-lat2.xml,Latin,"Augustine, Saint",Epistulae. Selections.,46354,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0660/phi003/phi0660.phi003.perseus-lat2.xml,Latin,Sulpicia,Carmina Omnia,256,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi002/phi0893.phi002.perseus-lat2.xml,Latin,Q. Horatius Flaccus,Carmen Saeculare,309,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi003/phi0893.phi003.perseus-lat2.xml,Latin,Q. Horatius Flaccus,Epodon,3006,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi006/phi0893.phi006.perseus-lat2.xml,Latin,Q. Horatius Flaccus,De Arte Poetica liber,3084,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo022/phi1348.abo022.perseus-lat2.xml,Latin,Suetonius,Domitianus,3554,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo017/phi1348.abo017.perseus-lat2.xml,Latin,Suetonius,Galba,2856,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo021/phi1348.abo021.perseus-lat2.xml,Latin,Suetonius,Divus Titus,1488,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo019/phi1348.abo019.perseus-lat2.xml,Latin,Suetonius,Vitellius,2407,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo018/phi1348.abo018.perseus-lat2.xml,Latin,Suetonius,Otho,1665,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo020/phi1348.abo020.perseus-lat2.xml,Latin,Suetonius,Divus Vespasianus,3199,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi011/phi0692.phi011.perseus-lat1.xml,Latin,,"Moretum, Appendix Vergiliana",775,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi002/phi0692.phi002.perseus-lat1.xml,Latin,,"Lydia, Appendix Vergiliana",534,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi005/phi0692.phi005.perseus-lat1.xml,Latin,,"Copa, Appendix Vergiliana",238,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi003/phi0692.phi003.perseus-lat1.xml,Latin,,"Culex, Appendix Vergiliana",2614,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi013/phi0692.phi013.perseus-lat1.xml,Latin,,"De Est et Non, Appendix Vergiliana",174,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi012/phi0692.phi012.perseus-lat1.xml,Latin,,"De Institutione Viri Boni, Appendix Vergiliana",188,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi008/phi0692.phi008.perseus-lat1.xml,Latin,,Appendix Vergiliana,270,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi006/phi0692.phi006.perseus-lat1.xml,Latin,,Appendix Vergiliana,1060,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi001/phi0692.phi001.perseus-lat1.xml,Latin,,"Dirae, Appendix Vergiliana",650,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi007/phi0692.phi007.perseus-lat1.xml,Latin,,Appendix Vergiliana,3467,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0692/phi009/phi0692.phi009.perseus-lat1.xml,Latin,,"Catalepton, Appendix Vergiliana",1319,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo014/phi0588.abo014.perseus-lat2.xml,Latin,Cornelius Nepos,Datames,1822,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo013/phi0588.abo013.perseus-lat2.xml,Latin,Cornelius Nepos,Timotheus,657,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo025/phi0588.abo025.perseus-lat2.xml,Latin,Cornelius Nepos,Atticus,3596,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo022/phi0588.abo022.perseus-lat2.xml,Latin,Cornelius Nepos,Hamilcar,518,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo023/phi0588.abo023.perseus-lat2.xml,Latin,Cornelius Nepos,Hannibal,2079,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo024/phi0588.abo024.perseus-lat2.xml,Latin,Cornelius Nepos,Cato,444,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo012/phi0588.abo012.perseus-lat2.xml,Latin,Cornelius Nepos,Chabrias,489,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo015/phi0588.abo015.perseus-lat2.xml,Latin,Cornelius Nepos,Epaminondas,1673,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo008/phi0588.abo008.perseus-lat2.xml,Latin,Cornelius Nepos,Thrasybulus,603,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo006/phi0588.abo006.perseus-lat2.xml,Latin,Cornelius Nepos,Lysander,540,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo001/phi0588.abo001.perseus-lat2.xml,Latin,Cornelius Nepos,Miltiades,1357,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo007/phi0588.abo007.perseus-lat2.xml,Latin,Cornelius Nepos,Alcibiades,2021,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo009/phi0588.abo009.perseus-lat2.xml,Latin,Cornelius Nepos,Conon,740,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo010/phi0588.abo010.perseus-lat2.xml,Latin,Cornelius Nepos,Dion,1484,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo017/phi0588.abo017.perseus-lat2.xml,Latin,Cornelius Nepos,Agesilaus,1390,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo021/phi0588.abo021.perseus-lat2.xml,Latin,Cornelius Nepos,De Regibus,443,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo019/phi0588.abo019.perseus-lat2.xml,Latin,Cornelius Nepos,Phocion,542,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo018/phi0588.abo018.perseus-lat2.xml,Latin,Cornelius Nepos,Eumenes,2289,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo020/phi0588.abo020.perseus-lat2.xml,Latin,Cornelius Nepos,Timoleon,828,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo016/phi0588.abo016.perseus-lat2.xml,Latin,Cornelius Nepos,Pelopidas,714,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo011/phi0588.abo011.perseus-lat2.xml,Latin,Cornelius Nepos,Iphicrates,411,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo002/phi0588.abo002.perseus-lat2.xml,Latin,Cornelius Nepos,Themistocles,1716,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo005/phi0588.abo005.perseus-lat2.xml,Latin,Cornelius Nepos,Cimon,543,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo004/phi0588.abo004.perseus-lat2.xml,Latin,Cornelius Nepos,Pausanias,887,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0588/abo003/phi0588.abo003.perseus-lat2.xml,Latin,Cornelius Nepos,Aristides,347,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00113s/phi0914.phi00113s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 13s",145,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00119s/phi0914.phi00119s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 19s",166,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00133/phi0914.phi00133.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 33-34 - 33",10595,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00114s/phi0914.phi00114s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 14s",101,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00143/phi0914.phi00143.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 43-45 - 43",3673,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00143/phi0914.phi00143.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 43-44 - 43",5283,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00117s/phi0914.phi00117s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 17s",95,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00120s/phi0914.phi00120s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 20s",125,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00116s/phi0914.phi00116s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 16s",74,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00136/phi0914.phi00136.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 35-38 - 36",10489,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00132/phi0914.phi00132.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 31-32 - 32",9740,False,superseded_by_longer_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00135/phi0914.phi00135.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 35-38 - 35",11846,False,superseded_by_longer_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00115s/phi0914.phi00115s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 15s",60,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00137/phi0914.phi00137.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 35-38 - 37",15080,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00111s/phi0914.phi00111s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 11s",174,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00141/phi0914.phi00141.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 41-42 - 41",7007,False,duplicate_shorter_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00112s/phi0914.phi00112s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 12s",99,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00139/phi0914.phi00139.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 39-40 - 39",13510,False,superseded_by_longer_edition
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00118s/phi0914.phi00118s.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 18s",141,False,below_min_words(4000)
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi010/phi0959.phi010.perseus-lat2.xml,Latin,P. Ovidius Naso,Ibis,4032,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi002/phi0959.phi002.perseus-lat2.xml,Latin,P. Ovidius Naso,Epistulae,25762,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi005/phi0959.phi005.perseus-lat2.xml,Latin,P. Ovidius Naso,Remedia Amoris,5258,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi004/phi0959.phi004.perseus-lat2.xml,Latin,P. Ovidius Naso,Ars Amatoria,14903,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi008/phi0959.phi008.perseus-lat2.xml,Latin,P. Ovidius Naso,Tristia,22117,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi006/phi0959.phi006.perseus-lat2.xml,Latin,P. Ovidius Naso,Metamorphoses,77642,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi001/phi0959.phi001.perseus-lat2.xml,Latin,P. Ovidius Naso,Amores,15635,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi007/phi0959.phi007.perseus-lat2.xml,Latin,P. Ovidius Naso,Fasti,31267,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0959/phi009/phi0959.phi009.perseus-lat2.xml,Latin,P. Ovidius Naso,Ex Ponto,20158,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1276/phi001/phi1276.phi001.perseus-lat2.xml,Latin,Juvenal,Saturae,24728,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0162/stoa004/stoa0162.stoa004.perseus-lat2.xml,Latin,"Jerome, Saint",Epistulae. Selections.,43834,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi010/phi1017.phi010.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Octavia,5259,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi002/phi1017.phi002.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Troades,6833,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi005/phi1017.phi005.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Phaedra,7206,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi004/phi1017.phi004.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Medea,5693,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi003/phi1017.phi003.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Phoenissae,4111,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi014/phi1017.phi014.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Clementia,7977,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi013/phi1017.phi013.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Beneficiis,43635,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Ad Lucilium Epistulae Morales,98989,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi008/phi1017.phi008.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Thyestes,6316,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi006/phi1017.phi006.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Oedipus,5938,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi001/phi1017.phi001.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Hercules,7652,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi007/phi1017.phi007.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Agamemnon,5582,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1017/phi009/phi1017.phi009.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",Hercules Oetaeus,11324,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0969/phi001/phi0969.phi001.perseus-lat2.xml,Latin,Persius,Saturae,4388,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1212/phi002/phi1212.phi002.perseus-lat1.xml,Latin,Apuleius,Metamorphoses,50337,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1212/phi003/phi1212.phi003.perseus-lat2.xml,Latin,Apuleius,Florida,7884,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1212/phi001/phi1212.phi001.perseus-lat1.xml,Latin,Apuleius,Apologia,21508,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1020/phi002/phi1020.phi002.perseus-lat2.xml,Latin,P. Papinius Statius,Silvae,24006,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1020/phi003/phi1020.phi003.perseus-lat2.xml,Latin,P. Papinius Statius,Achilleis,7119,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1020/phi001/phi1020.phi001.perseus-lat2.xml,Latin,P. Papinius Statius,Thebais,61568,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa010/stoa0045.stoa010.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Epigrammata Ausonii de diversis rebus,4122,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa011/stoa0045.stoa011.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus",Epistularum,10432,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0045/stoa014/stoa0045.stoa014.perseus-lat2.xml,Latin,"Ausonius, Decimus Magnus","Ausonii Burdigalensis Vasatis Gratiarum Actio Ad Grati Angratianum
+                    Imperatorem Pro Consulatu",4142,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0428/phi001/phi0428.phi001.perseus-lat1.xml,Latin,Pseudo-Caesar,De Bello Alexandrino,10426,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa005/stoa0089.stoa005.perseus-lat2.xml,Latin,Claudian,de raptu Proserpinae,6994,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa004/stoa0089.stoa004.perseus-lat2.xml,Latin,Claudian,de consulatu Stilichonis,7583,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa003/stoa0089.stoa003.perseus-lat2.xml,Latin,Claudian,de Bello Gothico,4033,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa012/stoa0089.stoa012.perseus-lat2.xml,Latin,Claudian,Panegyricus de sexto consulatu Honorii Augusti,4160,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa008/stoa0089.stoa008.perseus-lat2.xml,Latin,Claudian,In Eutropium,7183,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa001/stoa0089.stoa001.perseus-lat2.xml,Latin,Claudian,Carminum minorum corpusculum,8615,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0089/stoa009/stoa0089.stoa009.perseus-lat2.xml,Latin,Claudian,In Rufinum,5730,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1351/phi002/phi1351.phi002.perseus-lat1.xml,Latin,Cornelius Tacitus,de Origine et Situ Germanorum Liber,5521,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml,Latin,Cornelius Tacitus,Annales,88921,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1351/phi004/phi1351.phi004.perseus-lat2.xml,Latin,Cornelius Tacitus,Historiae,51502,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1351/phi003/phi1351.phi003.perseus-lat1.xml,Latin,Cornelius Tacitus,Dialogus de Oratoribus,9311,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1351/phi001/phi1351.phi001.perseus-lat1.xml,Latin,Cornelius Tacitus,De Vita Iulii Agricolae,6744,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0426/phi001/phi0426.phi001.perseus-lat1.xml,Latin,Pseudo-Caesar,De Bello Africo,13001,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0472/phi001/phi0472.phi001.perseus-lat2.xml,Latin,C. Valerius Catullus,Carmina,12869,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi072/phi0474.phi072.perseus-lat1.xml,Latin,M. Tullius Cicero,Timaeus,4224,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi043/phi0474.phi043.perseus-lat1.xml,Latin,M. Tullius Cicero,De Republica,20210,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi010/phi0474.phi010.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro A. Cluentio,11374,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi028/phi0474.phi028.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Cn. Plancio,5416,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi017/phi0474.phi017.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro L. Flacco,10931,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi021/phi0474.phi021.perseus-lat2.xml,Latin,M. Tullius Cicero,De haruspicum responso in P. Clodium in Senatu Habita,5078,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi042/phi0474.phi042.perseus-lat1.xml,Latin,M. Tullius Cicero,Topica,5402,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi027/phi0474.phi027.perseus-lat2.xml,Latin,M. Tullius Cicero,In L. Calpurnium Pisonem,10921,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi020/phi0474.phi020.perseus-lat2.xml,Latin,M. Tullius Cicero,De Domo Sua Ad Pontifices,9190,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi011/phi0474.phi011.perseus-lat2.xml,Latin,M. Tullius Cicero,De Lege Agraria,13825,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi002/phi0474.phi002.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Sex. Roscio Amerino,8258,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi005/phi0474.phi005.perseus-lat2.xml,Latin,M. Tullius Cicero,In C. Verrem,58357,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi051/phi0474.phi051.perseus-lat1.xml,Latin,M. Tullius Cicero,De Senectute,7879,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi056/phi0474.phi056.perseus-lat1.xml,Latin,M. Tullius Cicero,Epistulae ad Familiares,121836,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi058/phi0474.phi058.perseus-lat1.xml,Latin,M. Tullius Cicero,Letters to and from Quintus,18668,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi003/phi0474.phi003.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro Q. Roscio Comoedo,4767,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi035/phi0474.phi035.perseus-lat2.xml,Latin,M. Tullius Cicero,Philippicae,30346,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi059/phi0474.phi059.perseus-lat1.xml,Latin,M. Tullius Cicero,Letters to and from Brutus,9793,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi057/phi0474.phi057.perseus-lat1.xml,Latin,M. Tullius Cicero,Letters to Atticus,127576,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi050/phi0474.phi050.perseus-lat1.xml,Latin,M. Tullius Cicero,de Natura Deorum,35786,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi014/phi0474.phi014.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro L. Murena,6674,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi013/phi0474.phi013.perseus-lat2.xml,Latin,M. Tullius Cicero,In L. Catilinam,7813,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi022/phi0474.phi022.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro P. Sestio,9622,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi049/phi0474.phi049.perseus-lat1.xml,Latin,M. Tullius Cicero,Tusculanae Disputationes,22110,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi047/phi0474.phi047.perseus-lat1.xml,Latin,M. Tullius Cicero,Paradoxa stoicorum ad M. Brutum,4434,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi040/phi0474.phi040.perseus-lat1.xml,Latin,M. Tullius Cicero,Orator,9519,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi024/phi0474.phi024.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro M. Caelio,4384,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi046/phi0474.phi046.perseus-lat1.xml,Latin,M. Tullius Cicero,Lucullus,5570,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi048/phi0474.phi048.perseus-lat1.xml,Latin,M. Tullius Cicero,de Finibus Bonorum et Malorum,21481,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi055/phi0474.phi055.perseus-lat1.xml,Latin,M. Tullius Cicero,De Officiis,34258,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi052/phi0474.phi052.perseus-lat2.xml,Latin,M. Tullius Cicero,Laelius De Amicitia,9075,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi037/phi0474.phi037.perseus-lat1.xml,Latin,M. Tullius Cicero,De Oratore,62155,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi008/phi0474.phi008.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro A. Caecina,10390,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi030/phi0474.phi030.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro C. Rabirio Postumo,4078,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi039/phi0474.phi039.perseus-lat1.xml,Latin,M. Tullius Cicero,Brutus,12487,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi001/phi0474.phi001.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro P. Quinctio,8652,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi053/phi0474.phi053.perseus-lat1.xml,Latin,M. Tullius Cicero,De Divinatione,27848,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi054/phi0474.phi054.perseus-lat1.xml,Latin,M. Tullius Cicero,De Fato,5211,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi038/phi0474.phi038.perseus-lat1.xml,Latin,M. Tullius Cicero,De Partitione Oratoria,6487,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi031/phi0474.phi031.perseus-lat2.xml,Latin,M. Tullius Cicero,Pro T. Annio Milone,4813,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0474/phi036/phi0474.phi036.perseus-lat1.xml,Latin,M. Tullius Cicero,De Inventione,33447,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0836/phi002/phi0836.phi002.perseus-lat6.xml,Latin,Celsus,De Medicina,102996,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0690/phi002/phi0690.phi002.perseus-lat2.xml,Latin,P. Vergilius Maro,Georgicon,14183,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0690/phi003/phi0690.phi003.perseus-lat2.xml,Latin,P. Vergilius Maro,Aeneid,63715,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0690/phi001/phi0690.phi001.perseus-lat2.xml,Latin,P. Vergilius Maro,Eclogues,5757,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa002/stoa0238.stoa002.perseus-lat2.xml,Latin,Prudentius,Psychomachia,6005,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa005/stoa0238.stoa005.perseus-lat2.xml,Latin,Prudentius,Apotheosis,7418,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa004/stoa0238.stoa004.perseus-lat2.xml,Latin,Prudentius,Cathemerina,7399,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa006/stoa0238.stoa006.perseus-lat2.xml,Latin,Prudentius,Hamartigenia,6398,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa001/stoa0238.stoa001.perseus-lat2.xml,Latin,Prudentius,Peristephanon Liber,17665,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0238/stoa007/stoa0238.stoa007.perseus-lat2.xml,Latin,Prudentius,Contra Symmachum,12020,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi017/phi2331.phi017.perseus-lat2.xml,Latin,,Antoninus Heliogabalus,5085,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi019/phi2331.phi019.perseus-lat2.xml,Latin,,Maximini Duo,4923,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi026/phi2331.phi026.perseus-lat2.xml,Latin,,Divus Aurelianus,7062,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi018/phi2331.phi018.perseus-lat2.xml,Latin,,Alexander Severus,9387,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi020/phi2331.phi020.perseus-lat2.xml,Latin,,Gordiani Tres,5133,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi004/phi2331.phi004.perseus-lat2.xml,Latin,,Marcus Antoninus Philosophus,4880,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi024/phi2331.phi024.perseus-lat2.xml,Latin,,Tyranni Triginta,5801,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2331/phi001/phi2331.phi001.perseus-lat2.xml,Latin,,De vita Hadriani,4415,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1318/phi001/phi1318.phi001.perseus-lat1.xml,Latin,Pliny the Younger,Letters,66662,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0631/phi002/phi0631.phi002.perseus-lat4.xml,Latin,Sallust,The Jugurthine War,21244,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0631/phi002/phi0631.phi002.perseus-lat3.xml,Latin,Sallust,Jugurtha,21245,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0631/phi003/phi0631.phi003.perseus-lat2.xml,Latin,Sallust,Historiae,4092,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0631/phi001/phi0631.phi001.perseus-lat4.xml,Latin,Sallust,The Catilinarian Conspiracy,10655,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0631/phi001/phi0631.phi001.perseus-lat3.xml,Latin,Sallust,Catilina,10678,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1345/phi001/phi1345.phi001.perseus-lat2.xml,Latin,Silius Italicus,Punica,76402,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa023/stoa0058.stoa023.perseus-lat1.xml,Latin,Boethius,Liber De Persona et Duabus Naturis Contra Eutychen Et Nestorium,5860,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0058/stoa001/stoa0058.stoa001.perseus-lat2.xml,Latin,Boethius,De consolatione philosophiae,24595,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa010/stoa0255.stoa010.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Ira,21576,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa004/stoa0255.stoa004.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Brevitate Vitae,5228,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa014/stoa0255.stoa014.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Vita Beata,6431,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa013/stoa0255.stoa013.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Tranquillitate Animi,6679,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa008/stoa0255.stoa008.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Consolatione ad Polybium,5077,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa006/stoa0255.stoa006.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Consolatione ad Helviam,6430,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa007/stoa0255.stoa007.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Consolatione ad Marciam,7198,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0255/stoa009/stoa0255.stoa009.perseus-lat2.xml,Latin,"Seneca, Lucius Annaeus",De Constantia,4934,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1002/phi001/phi1002.phi001.perseus-lat2.xml,Latin,Quintilian,Institutio Oratoria,166273,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1056/phi001/phi1056.phi001.perseus-lat1.xml,Latin,Vitruvius Pollio,De Architectura,58047,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1035/phi001/phi1035.phi001.perseus-lat2.xml,Latin,Valerius Flaccus,Argonautica,32224,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0917/phi001/phi0917.phi001.perseus-lat2.xml,Latin,M. Annaeus Lucanus,Pharsalia,53085,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0972/phi001/phi0972.phi001.perseus-lat1.xml,Latin,Petronius,Satyricon,24155,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0975/phi001/phi0975.phi001.perseus-lat2.xml,Latin,Phaedrus,Fabulae Aesopiae,11575,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1254/phi001/phi1254.phi001.perseus-lat2.xml,Latin,Aulus Gellius,Noctes Atticae,106663,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1014/phi002/phi1014.phi002.perseus-lat1.xml,Latin,Seneca the Elder,Excerpta Controversiae,21729,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1014/phi003/phi1014.phi003.perseus-lat1.xml,Latin,Seneca the Elder,Suasoriae,10208,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1014/phi001/phi1014.phi001.perseus-lat1.xml,Latin,Seneca the Elder,Controversiae,67225,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi002/phi0134.phi002.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Heautontimorumenos,10988,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi005/phi0134.phi005.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Hecyra,9036,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi004/phi0134.phi004.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Phormio,10848,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi003/phi0134.phi003.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Eunuchus,10843,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi006/phi0134.phi006.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Adelphi,9901,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0134/phi001/phi0134.phi001.perseus-lat2.xml,Latin,Publius Terentius Afer (Terence),Andria,9852,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0550/phi001/phi0550.phi001.perseus-lat1.xml,Latin,Lucretius,De Rerum Natura,49020,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi2003/phi001/phi2003.phi001.perseus-lat1.xml,Latin,Apicius,De Re Coquinaria,15914,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1242/phi001/phi1242.phi001.perseus-lat1.xml,Latin,"Florus, Lucius Annaeus",Epitome Rerum Romanorum,20027,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0023/stoa001/stoa0023.stoa001.perseus-lat2.xml,Latin,Ammianus Marcellinus,Res Gestae,95155,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0478/phi003/phi0478.phi003.perseus-lat2.xml,Latin,Q. Tullius Cicero,Commentariolum Petitionis,4366,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0079/stoa001/stoa0079.stoa001.perseus-lat1.xml,Latin,"Cato, Marcus Porcius",De agri cultura,15768,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0845/phi002/phi0845.phi002.perseus-lat3.xml,Latin,Columella,"Res Rustica, Books I-IX",42145,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0448/phi002/phi0448.phi002.perseus-lat2.xml,Latin,Julius Caesar,De Bello Civili,32368,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0448/phi002/phi0448.phi002.perseus-lat3.xml,Latin,Julius Caesar,The Civil Wars,32338,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0448/phi001/phi0448.phi001.perseus-lat2.xml,Latin,Julius Caesar,De bello Gallico,51316,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0275/stoa027/stoa0275.stoa027.perseus-lat2.xml,Latin,Tertullian,De Spectaculis,6364,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0275/stoa009/stoa0275.stoa009.perseus-lat2.xml,Latin,Tertullian,Apologeticum,19967,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0620/phi001/phi0620.phi001.perseus-lat3.xml,Latin,Sextus Propertius,Elegiae,25383,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0040/stoa011/stoa0040.stoa011.perseus-lat1.xml,Latin,"Augustine, Saint",Epistulae. Selections.,46354,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0430/phi001/phi0430.phi001.perseus-lat1.xml,Latin,Pseudo-Caesar,De Bello Hispaniensi,6053,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0261/stoa0002/stoa0261.stoa0002.perseus-lat1.xml,Latin,Sidonius Apollinaris,"Epistulae, Books I-IX",48829,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0261/stoa0002/stoa0261.stoa0002.perseus-lat2.xml,Latin,Sidonius Apollinaris,"Epistulae, Books VIII-IX",12817,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0261/stoa0001/stoa0261.stoa0001.perseus-lat1.xml,Latin,Sidonius Apollinaris,Carmina,22529,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0054/stoa006/stoa0054.stoa006.perseus-lat1.xml,Latin,Bede the Venerable,Historiam ecclesiasticam gentis Anglorum,56330,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0660/phi001/phi0660.phi001.perseus-lat2.xml,Latin,Tibullus,Elegiae,12366,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/stoa0203/stoa001/stoa0203.stoa001.perseus-lat2.xml,Latin,Minucius Felix,Octavius,11599,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi005/phi0893.phi005.perseus-lat2.xml,Latin,Q. Horatius Flaccus,Epistulae,9155,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi004/phi0893.phi004.perseus-lat2.xml,Latin,Q. Horatius Flaccus,Satyrarum libri,14371,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0893/phi001/phi0893.phi001.perseus-lat2.xml,Latin,Q. Horatius Flaccus,Carmina,13292,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo014/phi1348.abo014.perseus-lat2.xml,Latin,Suetonius,C. Caligula,7754,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo013/phi1348.abo013.perseus-lat2.xml,Latin,Suetonius,Tiberius,9286,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo012/phi1348.abo012.perseus-lat2.xml,Latin,Suetonius,Divus Augustus,13836,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo015/phi1348.abo015.perseus-lat2.xml,Latin,Suetonius,Divus Claudius,6503,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo016/phi1348.abo016.perseus-lat2.xml,Latin,Suetonius,Nero,7903,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1348/abo011/phi1348.abo011.perseus-lat2.xml,Latin,Suetonius,Divus Julius,9753,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0860/phi001/phi0860.phi001.perseus-lat2.xml,Latin,"Curtius Rufus, Quintus",Historiae Alexandri Magni,73812,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1294/phi002/phi1294.phi002.perseus-lat2.xml,Latin,Martial,Epigrammata,58313,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml,Latin,Pliny the Elder,Naturalis Historia,59834,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00131/phi0914.phi00131.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 31-32 - 31",11612,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00138/phi0914.phi00138.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 35-38 - 38",15514,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0016/phi0914.phi0016.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 6-10 - 6",13456,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0011/phi0914.phi0011.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 1-5 - 1",17457,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0011/phi0914.phi0011.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 1-2 - 1",14992,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0018/phi0914.phi0018.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 6-10 - 8",12935,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0018/phi0914.phi0018.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 8",10672,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00134/phi0914.phi00134.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 33-34 - 34",13859,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0019/phi0914.phi0019.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 9",13790,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0019/phi0914.phi0019.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 6-10 - 9",16029,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0017/phi0914.phi0017.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 6-10 - 7",13211,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00142/phi0914.phi00142.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 41-42 - 42",15588,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00145/phi0914.phi00145.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 43-45 - 45",9208,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00145/phi0914.phi00145.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklürt von M. Weissenborn, book 45",11962,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00129/phi0914.phi00129.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 28-30 - 29",9480,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00129/phi0914.phi00129.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 26-30 - 29",12278,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00127/phi0914.phi00127.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 26-30 - 27",17340,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00127/phi0914.phi00127.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 26-27 - 27",13422,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00144/phi0914.phi00144.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 43-45 - 44",9335,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00144/phi0914.phi00144.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 43-44 - 44",11446,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00126/phi0914.phi00126.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 26-27 - 26",13655,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00126/phi0914.phi00126.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 26-30 - 26",16871,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00121/phi0914.phi00121.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 21-25 - 21",15554,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00121/phi0914.phi00121.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 21-22 - 21",11782,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00128/phi0914.phi00128.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 26-30 - 28",16708,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00128/phi0914.phi00128.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 28-30 - 28",12868,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00110/phi0914.phi00110.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 6-10 - 10",15145,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00110/phi0914.phi00110.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 8-10 - 10",12760,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0012/phi0914.phi0012.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 1-5 - 2",17826,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0012/phi0914.phi0012.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 1-2 - 2",15413,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0015/phi0914.phi0015.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 1-5 - 5",16072,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0015/phi0914.phi0015.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 5-7 - 5",13672,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0014/phi0914.phi0014.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 3-4 - 4",13914,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0014/phi0914.phi0014.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 1-5 - 4",16805,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0013/phi0914.phi0013.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 1-5 - 3",20202,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi0013/phi0914.phi0013.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 3-4 - 3",16905,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00140/phi0914.phi00140.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita libri, erklärt von M. Weissenborn, books 39-40 - 40",13695,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00130/phi0914.phi00130.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 26-30 - 30",13543,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00130/phi0914.phi00130.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 28-30 - 30",9804,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00124/phi0914.phi00124.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 21-25 - 24",14145,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00124/phi0914.phi00124.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 23-25 - 24",12155,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00123/phi0914.phi00123.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 21-25 - 23",14697,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00123/phi0914.phi00123.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 23-25 - 23",12498,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi001/phi0914.phi001.perseus-lat2.xml,Latin,Titus Livius (Livy),Ab urbe condita,518092,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00122/phi0914.phi00122.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 21-22 - 22",11974,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00122/phi0914.phi00122.perseus-lat2.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 21-25 - 22",17178,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00125/phi0914.phi00125.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita, books 21-25 - 25",14493,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi00125/phi0914.phi00125.perseus-lat3.xml,Latin,Titus Livius (Livy),"Ab Urbe Condita, books 23-25 - 25",12779,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0914/phi001fr/phi0914.phi001fr.perseus-lat1.xml,Latin,Titus Livius (Livy),"Ab urbe condita, fragments",11676,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi010/phi0119.phi010.perseus-lat2.xml,Latin,T. Maccius Plautus,Menaechmi,9612,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi017/phi0119.phi017.perseus-lat2.xml,Latin,T. Maccius Plautus,Rudens,11945,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi019/phi0119.phi019.perseus-lat2.xml,Latin,T. Maccius Plautus,Trinummus,9999,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi018/phi0119.phi018.perseus-lat2.xml,Latin,T. Maccius Plautus,Stichus,6374,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi020/phi0119.phi020.perseus-lat2.xml,Latin,T. Maccius Plautus,Truculentus,8368,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi016/phi0119.phi016.perseus-lat2.xml,Latin,T. Maccius Plautus,Pseudolus,11354,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi011/phi0119.phi011.perseus-lat2.xml,Latin,T. Maccius Plautus,Mercator,8753,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi002/phi0119.phi002.perseus-lat2.xml,Latin,T. Maccius Plautus,Asinaria,8204,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi005/phi0119.phi005.perseus-lat2.xml,Latin,T. Maccius Plautus,Captivi,8778,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi004/phi0119.phi004.perseus-lat2.xml,Latin,T. Maccius Plautus,Bacchides,10176,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi003/phi0119.phi003.perseus-lat2.xml,Latin,T. Maccius Plautus,Aulularia,6953,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi014/phi0119.phi014.perseus-lat2.xml,Latin,T. Maccius Plautus,Persa,7941,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi013/phi0119.phi013.perseus-lat2.xml,Latin,T. Maccius Plautus,Mostellaria,9742,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi012/phi0119.phi012.perseus-lat2.xml,Latin,T. Maccius Plautus,Miles Gloriosus,12809,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi015/phi0119.phi015.perseus-lat2.xml,Latin,T. Maccius Plautus,Poenulus,11661,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi008/phi0119.phi008.perseus-lat2.xml,Latin,T. Maccius Plautus,Curculio,6251,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi006/phi0119.phi006.perseus-lat2.xml,Latin,T. Maccius Plautus,Casina,7783,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi001/phi0119.phi001.perseus-lat2.xml,Latin,T. Maccius Plautus,Amphitruo,9934,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi007/phi0119.phi007.perseus-lat2.xml,Latin,T. Maccius Plautus,Cistellaria,5323,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi0119/phi009/phi0119.phi009.perseus-lat2.xml,Latin,T. Maccius Plautus,Epidicus,6563,True,kept
+canonical-latinLit,perseus_cache/canonical-latinLit-master/data/phi1038/phi001/phi1038.phi001.perseus-lat1.xml,Latin,Valerius Maximus,Facta et Dicta Memorabilia,80003,True,kept

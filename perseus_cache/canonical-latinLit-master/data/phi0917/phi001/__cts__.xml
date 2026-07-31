@@ -1,0 +1,15 @@
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0917" projid="latinLit:phi001" urn="urn:cts:latinLit:phi0917.phi001" xml:lang="lat">
+    <ti:title xml:lang="eng">Civil War</ti:title>
+    <ti:edition projid="latinLit:perseus-lat2" urn="urn:cts:latinLit:phi0917.phi001.perseus-lat2" workUrn="urn:cts:latinLit:phi0917.phi001">
+        <ti:label xml:lang="eng">Pharsalia</ti:label>
+        <ti:description xml:lang="mul">Lucan. M.Annaei Lucani Pharsaliae Libri X. Weisse, Karl Hermann, editor.
+            Leipzig: G. Bassus, 1835.</ti:description>
+        <ti:memberof collection="Perseus:collection:Greco-Roman" />
+    </ti:edition>
+    <ti:translation projid="latinLit:perseus-eng2" urn="urn:cts:latinLit:phi0917.phi001.perseus-eng2" xml:lang="eng" workUrn="urn:cts:latinLit:phi0917.phi001">
+        <ti:label xml:lang="eng">Civil War</ti:label>
+        <ti:description xml:lang="eng">Lucan. The Pharsalia of Lucan. Ridley, Edward, Sir, translator. New York: Longman,
+        Green, and Company, 1905.</ti:description>
+        <ti:memberof collection="Perseus:collection:Greco-Roman" />
+    </ti:translation>
+</ti:work>

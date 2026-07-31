@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="lat">Fragmenta</title>                
+                <author>Seneca the Elder</author>
+                <editor>Adolf Gottlieb Kiessling</editor>
+                <sponsor>Perseus Project, Tufts University</sponsor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Bridget Almas</name>
+                    <name>Lisa Cerrato</name>
+                    <name>Rashmi Singhal</name>
+                </respStmt>
+                <respStmt>
+                    <persName>Zach Himes</persName>
+                    <orgName>Tufts University</orgName>
+                    <resp>CTS and EpiDoc conversion</resp>
+                </respStmt>
+                <funder n="org:Mellon">The Mellon Foundation</funder>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+                <date type="release">2011-04-14</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title xml:lang="lat">Annaei Senecae Oratorum et rhetorum sententiae divisiones colores</title>
+                        <author>Seneca the Elder</author>
+                        <editor>Adolf Gottlieb Kiessling</editor>
+                        <imprint>
+                            <publisher>Teubner</publisher>
+                            <pubPlace>Leipzig</pubPlace>
+                            <date>1872</date>
+                        </imprint>
+                    </monogr>
+                    <ref target="https://archive.org/details/oratorumetrhetor00seneuoft/page/526/mode/2up">Internet Archive</ref>
+                </biblStruct>
+                
+                <list><item>Keyboarding</item></list></sourceDesc>
+        </fileDesc>
+        
+	<encodingDesc>
+            <refsDecl n="CTS">
+                <cRefPattern n="fragment"
+                         matchPattern="(\w+).(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
+                    <p>This pointer pattern extracts Book and Chapter</p>
+                </cRefPattern>
+            </refsDecl>
+            <refsDecl>
+                <refState unit="book" delim="."/>
+                <refState unit="fragment"/>
+            </refsDecl>
+        </encodingDesc>
+        
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+                <language ident="grc">Greek</language>
+            </langUsage>
+        </profileDesc>
+	<revisionDesc> 
+	    <change who="Alison Babeu" when="2025-02-06">Updated header and metadata</change>
+	    <change who="Zach Himes" when="2015-11-16">Converted to TEI P5 and EpiDoc</change>
+	    </revisionDesc>
+    </teiHeader>
+    
+    
+    <text><body><div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi1014.phi004.perseus-lat1">        
+<pb n="p.526"/>
+<div type="textpart" n="1" subtype="book"><head>incertae sedis reliquiae</head>
+    <div type="textpart" n="1" subtype="fragment"><cit><quote>nam memini iuuenis admodum inter Pomponium ac
+        Senecam etiam praefationibus esse tractatum an “gradus
+            eliminat” in tragoedia dici oportuisset.</quote> <bibl>Quint. VIII 3,31.</bibl></cit></div>
+    
+    <div type="textpart" n="2" subtype="fragment"><cit><quote>noui uero et praecipue declamatores audacius nec
+        mehercule sine motu quodam imaginantur, ut Seneca in
+        controuersia cuius summa est, quod pater filium et nouercam
+        inducente altero filio in adulterio deprensos occidit: “duc,
+            sequor: accipe hanc senilem manum et quocumque uis
+            inprime” et post paulo: “aspice, inquit, quod diu non credidisti.
+                ego uero non uideo, nox oboritur et crassa caligo.” </quote> <bibl>Quint. 9.2.42</bibl></cit></div>
+    
+    <div type="textpart" n="3" subtype="fragment"><cit><quote>nam et in totum iurare, nisi ubi necesse est, graui
+        uiro parum conuenit, et est a Seneca dictum eleganter, non
+        patronorum hoc esse sed testium.</quote> <bibl>Quint. 9.2.98.</bibl></cit></div>
+    <div type="textpart" n="4" subtype="fragment"><cit><quote>et Seneca tradidit Iulium Montanum poetam
+        solitum dicere, inuolaturum se Vergilio quaedam si et uocem
+        posset et os et hypocrisin: eosdem enim uersus ipso
+        pronuntiante bene sonare, sine illo inanes esse mutosque.</quote> <bibl>Donat.
+            uita Vergilii p. 61.5 Reiff.</bibl></cit>
+    </div></div>       
+    </div>
+    </body></text>
+</TEI>

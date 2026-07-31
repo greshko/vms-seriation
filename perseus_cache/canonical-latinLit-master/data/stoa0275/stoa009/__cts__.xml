@@ -1,0 +1,8 @@
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:stoa0275.stoa009" xml:lang="lat" groupUrn="urn:cts:latinLit:stoa0275">
+            <ti:title xml:lang="lat">Apologeticum</ti:title>
+          <ti:edition urn="urn:cts:latinLit:stoa0275.stoa009.perseus-lat2" workUrn="urn:cts:latinLit:stoa0275.stoa009">
+              <ti:label xml:lang="lat">Apologeticum</ti:label>
+            <ti:description xml:lang="mul">Tertullian. Apology De Spectaculis. Minucius Felix. Glover, T. R. (Terrot Reaveley), editor.
+            Cambridge, Massachusetts; London: Harvard University Press, William Heinemann, Ltd., 1931 (printing).</ti:description>
+            </ti:edition>
+          </ti:work>
