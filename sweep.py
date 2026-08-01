@@ -8,9 +8,9 @@ distance_metric), this script:
   1. Generates a synthetic collation via foliation.py
   2. Fits an NMF ensemble (K = 5–15, multiple seeds)
   3. Builds a weighted pairwise distance matrix
-  4. Optimises a seriation order via SA + Or-opt + 2-opt
-  5. Computes bifolio adjacency rate vs. random baseline
-  6. Writes per-text and combined CSVs and a combined visualisation
+  4. Optimizes a seriation order via SA + Or-opt + 2-opt
+  5. Computes conjoint adjacency rate vs. random baseline
+  6. Writes per-text and combined CSVs and a combined visualization
 
 All *.txt files found in TEXTS_DIR are processed. Results are written both
 per-text (outputs/<stem>/results_full.csv etc.) and combined across all texts
@@ -484,7 +484,7 @@ def run_combination(
 
 
 # =============================================================================
-# VISUALISATION (self-contained HTML)
+# VISUALIZATION (self-contained HTML)
 # =============================================================================
 
 def build_viz_html(summary_df: pd.DataFrame, title: str = "Seriation Sweep") -> str:
@@ -806,7 +806,7 @@ def main() -> None:
     all_summary_df.to_csv(all_summary_path, index=False)
     print(f"Combined summary -> {all_summary_path}  ({len(all_summary_df)} rows)")
 
-    # Combined visualisation: average over source texts so the chart
+    # Combined visualization: average over source texts so the chart
     # shape is directly comparable across texts on one page.
     # We pass the summary averaged over source_text for the chart data,
     # but the full per-source data is in the CSV for deeper analysis.
