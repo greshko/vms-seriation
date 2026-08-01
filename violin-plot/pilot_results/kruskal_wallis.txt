@@ -1,1 +1,0 @@
-Kruskal-Wallis omnibus across 5 groups: H=13.828, p=0.00786378

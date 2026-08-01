@@ -1,23 +1,36 @@
 """
 violin.py
 ===================================
-Standalone significance-testing + plotting script that performs a
+Standalone significance-testing + plotting script that performs the
 one-point-per-source-text analysis: every synthetic-collation
-run is first collapsed to a single median value per source text.
+run is first collapsed to a single median value per source text, so the
+statistical unit is the DOCUMENT, not the run.
 
 
 WHAT IT PRODUCES
 ----------------
 1. text_level_values.csv
        One row per (group, source_text): the median lift used everywhere else.
-2. pairwise_mwu_text_level.csv
-       Mann-Whitney U among baseline quire-construction groups (exact method
-       where feasible), Holm-corrected.
+2. pairwise_wilcoxon_text_level.csv
+       Wilcoxon signed-rank test among baseline quire-construction groups,
+       Holm-corrected. Every one of the 50 source texts is seriated under
+       ALL 5 quire constructions, so the groups are matched/paired samples
+       (a repeated-measures design), not independent ones -- each text acts
+       as its own control across quire constructions. Mann-Whitney U (which
+       assumes independent samples and discards the text-to-text pairing)
+       is therefore the wrong test here; Wilcoxon signed-rank on the
+       matched per-text differences is the paired analogue and is what's
+       used throughout this script.
 3. pairwise_bootstrap_text_level.csv
-       Text-level cluster bootstrap (resample source texts) for the same
-       pairwise comparisons -- an assumption-light cross-check on the MWU.
-4. kruskal_wallis.txt
-       Omnibus test across all baseline groups.
+       Paired/cluster bootstrap (resample source texts, keeping each
+       resampled text's value in every group together) for the same
+       pairwise comparisons -- an assumption-light cross-check on Wilcoxon
+       that preserves the paired design instead of resampling each group
+       independently.
+4. friedman.txt
+       Omnibus test across all baseline groups -- Friedman's test, the
+       paired analogue of Kruskal-Wallis, which ranks each text's 5 values
+       within that text before comparing rank sums across groups.
 5. vms_membership_report.csv  (only if VMS data is present)
        For each baseline group, three complementary answers to "is VMS a
        plausible member of this group's distribution", each appropriate to
@@ -25,7 +38,8 @@ WHAT IT PRODUCES
          a) EXACT RANK TEST (nonparametric, no distributional assumption):
             treats VMS + the n baseline texts as n+1 exchangeable draws and
             asks how extreme VMS's rank is. Exact, but bounded below by
-            1/(n+1).
+            1/(n+1) -- it cannot express "less likely than 1 in 46" even if
+            the true effect is much larger.
          b) EMPIRICAL TAIL FRACTION: the fraction of the n observed texts
             at least as extreme as VMS. Simple, but same floor-at-zero
             problem when VMS exceeds every observed text (all pairwise
@@ -50,9 +64,10 @@ WHAT IT PRODUCES
             SAME selected family (chosen once per group from the full
             sample, not re-selected per resample) on bootstrap resamples
             of the n texts and reporting the resulting percentile interval.
-            This is the piece that can give a sense of just how far outside
-	    the distribution VMS sits, at the cost of assuming *some*
-	    parametric shape is reasonable for these values -- flagged so it
+            This is the piece that can express "less likely than 1-in-46"
+            and give a sense of just how far outside the distribution VMS
+            sits, at the cost of assuming *some* parametric shape is a
+            reasonable model for these values -- flagged explicitly so it
             isn't over-trusted, and the AIC table for every family is
             written out alongside it so the choice can be audited.
 6. distribution_fit_comparison.csv
@@ -102,7 +117,13 @@ def load_full_data(xlsx_path: Path) -> tuple[pd.DataFrame, pd.DataFrame | None]:
     VMS data may appear as:
         (a) a sheet literally named "voynich"
         (b) rows in the baseline sheet whose source_text names the VMS
-        (c) absent entirely (baseline-only run)
+        (c) both at once (a "voynich" sheet AND a leftover VMS row inside
+            the baseline sheet, e.g. if baseline is itself a concatenation
+            of every run) -- the VMS row is always stripped out of baseline
+            regardless of where the returned `vms` df came from, since a
+            baseline text with no value in any real quire-construction
+            group breaks the fully-crossed assumption of the paired tests
+        (d) absent entirely (baseline-only run)
     Returns (baseline_df, vms_df_or_None).
     """
     xl = pd.ExcelFile(xlsx_path)
@@ -129,7 +150,19 @@ def load_full_data(xlsx_path: Path) -> tuple[pd.DataFrame, pd.DataFrame | None]:
         )
         if vms_mask.any():
             vms = baseline.loc[vms_mask].copy()
-            baseline = baseline.loc[~vms_mask].copy()
+
+    # Regardless of where `vms` came from (a dedicated sheet, or rows pulled
+    # out of baseline above), strip any voynich/VMS-named rows out of
+    # baseline. A baseline results sheet can independently contain a VMS
+    # row (e.g. if it's a concatenation of every run) even when a separate
+    # "voynich" sheet also exists -- leaving such a row in baseline breaks
+    # the fully-crossed assumption of the paired tests, since that text has
+    # no value in any of the real quire-construction groups.
+    vms_mask = baseline["source_text"].astype(str).str.contains(
+        "voynich|vms", case=False, regex=True
+    )
+    if vms_mask.any():
+        baseline = baseline.loc[~vms_mask].copy()
 
     if "bifolios_per_quire" in baseline.columns and "bpq_label" not in baseline.columns:
         baseline["bpq_label"] = (
@@ -167,22 +200,61 @@ def text_level_aggregate(df: pd.DataFrame, group_col: str = "bpq_label") -> pd.D
 # PAIRWISE TESTS AMONG BASELINE GROUPS
 # =============================================================================
 
-def run_pairwise_mwu(data: dict[str, np.ndarray], groups: list[str],
-                      alpha: float = 0.05) -> pd.DataFrame:
-    """Holm-corrected pairwise Mann-Whitney U, exact method when n is small
-    enough for it to be tractable."""
+def build_paired_matrix(baseline_text: pd.DataFrame, groups: list[str]) -> pd.DataFrame:
+    """
+    Pivot text-level medians to a (source_text x group) matrix, aligned by
+    source_text. Every one of the 50 texts appears once per group -- this is
+    the correct shape for paired tests (Wilcoxon, Friedman), since it keeps
+    each text's value across all 5 quire constructions on the same row.
+
+    Raises if any (group, source_text) cell is missing -- a paired test is
+    only valid on a fully-crossed design, and a silent NaN-drop per pairwise
+    comparison would quietly change the effective N test-to-test.
+    """
+    pivot = baseline_text.pivot(index="source_text", columns="bpq_label",
+                                 values="text_level_median")
+    missing = pivot[groups].isna().sum()
+    if missing.any():
+        raise ValueError(
+            "build_paired_matrix: not every source_text has a value in every "
+            f"group -- design is not fully crossed. Missing counts:\n{missing}"
+        )
+    return pivot[groups]
+
+
+def run_pairwise_wilcoxon(pivot: pd.DataFrame, groups: list[str],
+                           alpha: float = 0.05) -> pd.DataFrame:
+    """
+    Holm-corrected pairwise Wilcoxon signed-rank test -- the paired analogue
+    of Mann-Whitney U. Each of the 50 source texts is seriated under every
+    quire construction, so group_a and group_b here are matched samples
+    (same text, two conditions), not independent draws; Wilcoxon operates on
+    the per-text differences and is the correct nonparametric test for that
+    structure. Effect size reported is matched-pairs rank-biserial
+    correlation, r = (W+ - W-) / (W+ + W-), on the signed ranks.
+    """
     rows = []
     for a, b in itertools.combinations(groups, 2):
-        xa, xb = data[a], data[b]
-        n1, n2 = len(xa), len(xb)
-        method = "exact" if max(n1, n2) <= 50 else "auto"
+        xa, xb = pivot[a].values, pivot[b].values
+        n = len(xa)
+        diffs = xa - xb
         try:
-            stat, p = stats.mannwhitneyu(xa, xb, alternative="two-sided", method=method)
+            stat, p = stats.wilcoxon(xa, xb, alternative="two-sided",
+                                      zero_method="wilcox", method="auto")
         except ValueError:
             stat, p = np.nan, np.nan
-        r = 1 - (2 * stat) / (n1 * n2) if n1 and n2 and not np.isnan(stat) else np.nan
-        rows.append(dict(group_a=a, group_b=b, n_a=n1, n_b=n2,
-                          statistic=stat, p_raw=p, effect_size_r=r))
+        nz = diffs[diffs != 0]
+        if len(nz):
+            ranks = stats.rankdata(np.abs(nz))
+            w_pos = ranks[nz > 0].sum()
+            w_neg = ranks[nz < 0].sum()
+            r = (w_pos - w_neg) / (w_pos + w_neg)
+        else:
+            r = np.nan
+        rows.append(dict(group_a=a, group_b=b, n_pairs=n,
+                          statistic=stat, p_raw=p,
+                          effect_size_rank_biserial=r,
+                          median_diff=float(np.median(diffs))))
     df = pd.DataFrame(rows)
     n_tests = len(df)
     order = df["p_raw"].argsort().values
@@ -196,27 +268,33 @@ def run_pairwise_mwu(data: dict[str, np.ndarray], groups: list[str],
     return df.sort_values("p_raw").reset_index(drop=True)
 
 
-def bootstrap_pairwise_median_diff(text_data: dict[str, np.ndarray], groups: list[str],
+def bootstrap_pairwise_median_diff(pivot: pd.DataFrame, groups: list[str],
                                     n_boot: int = N_BOOT_DEFAULT, seed: int = 42,
                                     alpha: float = 0.05) -> pd.DataFrame:
-    """Text-level cluster bootstrap for every pairwise group comparison: resample
-    source texts (with replacement) independently within each group, build the
-    bootstrap distribution of median(a) - median(b), and derive a CI + two-sided
-    bootstrap p-value. Cross-checks the MWU result without its assumptions."""
+    """
+    Paired/cluster bootstrap for every pairwise group comparison: resample
+    SOURCE TEXTS (rows of `pivot`) with replacement, so that a resampled
+    text's values in group_a and group_b always come from the same draw.
+    This preserves the matched-pairs structure of the design -- resampling
+    each group independently (as an unpaired bootstrap would) breaks the
+    pairing and can misstate the CI/p-value when, as here, text-level
+    variance is shared across conditions. Builds the bootstrap distribution
+    of median(a - b) computed per-resample on the paired differences, and
+    derives a percentile CI + two-sided bootstrap p-value. Cross-checks the
+    Wilcoxon result without assuming a particular null distribution shape.
+    """
     rng = np.random.default_rng(seed)
+    n_texts = len(pivot)
     rows = []
     for a, b in itertools.combinations(groups, 2):
-        xa, xb = text_data[a], text_data[b]
-        na, nb = len(xa), len(xb)
-        boot_diffs = np.array([
-            np.median(rng.choice(xa, size=na, replace=True))
-            - np.median(rng.choice(xb, size=nb, replace=True))
-            for _ in range(n_boot)
-        ])
+        xa, xb = pivot[a].values, pivot[b].values
+        diffs = xa - xb
+        idx_boot = rng.integers(0, n_texts, size=(n_boot, n_texts))
+        boot_diffs = np.median(diffs[idx_boot], axis=1)
         ci_lo, ci_hi = np.percentile(boot_diffs, [2.5, 97.5])
-        observed_diff = np.median(xa) - np.median(xb)
+        observed_diff = float(np.median(diffs))
         p_boot = min(2 * min(np.mean(boot_diffs <= 0), np.mean(boot_diffs >= 0)), 1.0)
-        rows.append(dict(group_a=a, group_b=b, n_a=na, n_b=nb,
+        rows.append(dict(group_a=a, group_b=b, n_pairs=n_texts,
                           observed_median_diff=observed_diff,
                           boot_ci_lo=ci_lo, boot_ci_hi=ci_hi, p_bootstrap=p_boot))
     df = pd.DataFrame(rows)
@@ -499,26 +577,34 @@ def main() -> None:
         print(f"  {'VMS':12s} N=1    value={vms_value:7.3f}")
     print()
 
-    # ---- Pairwise MWU among baseline groups ----
-    print("Pairwise Mann-Whitney U (text-level, Holm-corrected):")
-    mwu_df = run_pairwise_mwu(text_data, groups, alpha=args.alpha)
-    print(mwu_df[["group_a", "group_b", "n_a", "n_b", "statistic",
-                   "p_raw", "p_holm", "significant"]].to_string(index=False))
-    mwu_df.to_csv(out_dir / "pairwise_mwu_text_level.csv", index=False)
+    # ---- Paired matrix: every text has one value per group (fully crossed) ----
+    pivot = build_paired_matrix(baseline_text, groups)
 
-    # ---- Pairwise bootstrap among baseline groups ----
-    print("\nPairwise text-level bootstrap (median difference, Holm-corrected):")
-    boot_df = bootstrap_pairwise_median_diff(text_data, groups, n_boot=args.n_boot, alpha=args.alpha)
-    print(boot_df[["group_a", "group_b", "n_a", "n_b", "observed_median_diff",
+    # ---- Pairwise Wilcoxon signed-rank among baseline groups (paired design) ----
+    print("Pairwise Wilcoxon signed-rank (text-level, paired, Holm-corrected):")
+    print("  [Each of the N texts is seriated under every quire construction, so")
+    print("   groups are matched samples, not independent -- Wilcoxon replaces MWU.]")
+    wilcoxon_df = run_pairwise_wilcoxon(pivot, groups, alpha=args.alpha)
+    print(wilcoxon_df[["group_a", "group_b", "n_pairs", "statistic",
+                        "p_raw", "p_holm", "effect_size_rank_biserial",
+                        "significant"]].to_string(index=False))
+    wilcoxon_df.to_csv(out_dir / "pairwise_wilcoxon_text_level.csv", index=False)
+
+    # ---- Pairwise paired bootstrap among baseline groups ----
+    print("\nPairwise paired bootstrap (resample texts, median of paired diffs, Holm-corrected):")
+    boot_df = bootstrap_pairwise_median_diff(pivot, groups, n_boot=args.n_boot, alpha=args.alpha)
+    print(boot_df[["group_a", "group_b", "n_pairs", "observed_median_diff",
                     "boot_ci_lo", "boot_ci_hi", "p_bootstrap",
                     "p_bootstrap_holm", "significant"]].to_string(index=False))
     boot_df.to_csv(out_dir / "pairwise_bootstrap_text_level.csv", index=False)
 
-    # ---- Kruskal-Wallis omnibus ----
-    kw_stat, kw_p = stats.kruskal(*[text_data[g] for g in groups])
-    kw_line = f"Kruskal-Wallis omnibus across {len(groups)} groups: H={kw_stat:.3f}, p={kw_p:.6g}"
-    print(f"\n{kw_line}")
-    (out_dir / "kruskal_wallis.txt").write_text(kw_line + "\n")
+    # ---- Friedman omnibus (paired analogue of Kruskal-Wallis) ----
+    fr_stat, fr_p = stats.friedmanchisquare(*[pivot[g].values for g in groups])
+    fr_line = (f"Friedman omnibus across {len(groups)} groups "
+               f"(N={len(pivot)} paired texts): "
+               f"chi2={fr_stat:.3f}, df={len(groups) - 1}, p={fr_p:.6g}")
+    print(f"\n{fr_line}")
+    (out_dir / "friedman.txt").write_text(fr_line + "\n")
 
     # ---- VMS membership report ----
     if has_vms:
