@@ -115,7 +115,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("vms_csv", help="Path to the VMS token CSV (token, doc_id, bifolio_global, ...)")
     parser.add_argument("order_csv", help="Path to the rank/original/<seriation columns...> CSV")
-    parser.add_argument("--out", default="/mnt/user-data/outputs/vms_seriation_rows.png")
+    parser.add_argument("--out", default="./outputs/vms_cmyk.png")
     parser.add_argument("--seriation-cols", nargs="*", default=["hellinger", "js", "l1"],
                          help="Candidate seriation columns to slot between the physical order and consensus")
     parser.add_argument("--consensus-col", default="consensus")
