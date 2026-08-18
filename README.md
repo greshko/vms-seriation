@@ -29,6 +29,8 @@ a bifolium-level reordering of the entire VMS that
 converges with previously proposed all-singulion orderings
 of the Biological and Stars sections.
 
+You can view the consensus seriation here: https://vceditor.library.upenn.edu/project/6a6f5e5fef56250001215924/viewOnly
+
 # License and copyright
 
 Unless otherwise indicated, the source code contained in
