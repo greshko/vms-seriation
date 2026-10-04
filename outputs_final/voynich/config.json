@@ -1,0 +1,39 @@
+{
+  "script": "voynich_run_v2.py",
+  "version": 2,
+  "source_text": "voynich_rf1b",
+  "foliation_csv": "voynich/vms_rf1b_folio_bifolio.csv",
+  "foliation_sha256": "03dd7c54dde2ade30c851c7f6138ec0857c7186f0986db8612c0a085d870a22d",
+  "metrics": [
+    "hellinger",
+    "js",
+    "l1"
+  ],
+  "restarts": 8,
+  "nmf_seeds": 5,
+  "sa_mult": 200,
+  "k": [
+    5,
+    15
+  ],
+  "seed": 42,
+  "matched_sweep": null,
+  "bifolios_per_quire_sentinel": 0,
+  "n_tokens": 38525,
+  "n_folios": 102,
+  "n_bifolios": 52,
+  "n_quires": null,
+  "bifolio_size_counts": {
+    "1": 2,
+    "2": 50
+  },
+  "tokens_per_folio": {
+    "min": 47,
+    "median": 208.5,
+    "max": 1359
+  },
+  "random_baseline_exact": 0.009706853038245,
+  "random_baseline_foliation": 0.009802960494069214,
+  "k_min_used": 5,
+  "k_max_used": 15
+}

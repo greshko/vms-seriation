@@ -1,21 +1,26 @@
 """
 sweep.py
 ========
-Parameter sweep over synthetic collation configurations.
+Parameter sweep over synthetic foliation configurations.
 
 For each combination of (source_text, words_per_folio, bifolios_per_quire,
 distance_metric), this script:
-  1. Generates a synthetic collation via foliation.py
+  1. Generates a synthetic foliation via foliation.py
   2. Fits an NMF ensemble (K = 5–15, multiple seeds)
   3. Builds a weighted pairwise distance matrix
-  4. Optimizes a seriation order via SA + Or-opt + 2-opt
-  5. Computes conjoint adjacency rate vs. random baseline
-  6. Writes per-text and combined CSVs and a combined visualization
+  4. Optimises a seriation order via SA + Or-opt + 2-opt
+  5. Computes bifolio adjacency rate vs. random baseline
+  6. Writes per-text and combined CSVs and a combined visualisation
 
 All *.txt files found in TEXTS_DIR are processed. Results are written both
 per-text (outputs/<stem>/results_full.csv etc.) and combined across all texts
 (outputs/results_full_all.csv, outputs/results_summary_all.csv,
 outputs/results_viz_all.html).
+
+UPDATE (2026/10/04): Deprecated for uses other than providing seriation
+pipeline to voynich_folio.py and voynich_bifolio.py. sweep_v2.py contains
+correction to random baseline calcuation for calculating conjoint adjacency
+ratio over baseline (CAROB).
 
 Configuration
 -------------
@@ -484,7 +489,7 @@ def run_combination(
 
 
 # =============================================================================
-# VISUALIZATION (self-contained HTML)
+# VISUALISATION (self-contained HTML)
 # =============================================================================
 
 def build_viz_html(summary_df: pd.DataFrame, title: str = "Seriation Sweep") -> str:
@@ -806,7 +811,7 @@ def main() -> None:
     all_summary_df.to_csv(all_summary_path, index=False)
     print(f"Combined summary -> {all_summary_path}  ({len(all_summary_df)} rows)")
 
-    # Combined visualization: average over source texts so the chart
+    # Combined visualisation: average over source texts so the chart
     # shape is directly comparable across texts on one page.
     # We pass the summary averaged over source_text for the chart data,
     # but the full per-source data is in the CSV for deeper analysis.

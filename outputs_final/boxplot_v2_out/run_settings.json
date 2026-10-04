@@ -1,0 +1,50 @@
+{
+  "source_text": "vms-like-merge",
+  "mode": "text",
+  "text": "synthetic-miscellany/vms-like-merge.txt",
+  "n_words": 38112,
+  "window_len": 38112,
+  "vms_input": "violin-v2/results_full_vms.csv",
+  "filters": {
+    "wpf": [
+      370,
+      374,
+      378,
+      382,
+      386
+    ],
+    "metrics": null,
+    "best_cost_only": false
+  },
+  "box": [
+    25.0,
+    75.0
+  ],
+  "whiskers": [
+    5.0,
+    95.0
+  ],
+  "vms_bands": [
+    50.0,
+    90.0
+  ],
+  "runs_plotted": 750,
+  "groups": [
+    "Singulion",
+    "Binion",
+    "Ternion",
+    "Quaternion",
+    "Quinion"
+  ],
+  "tail_report": {
+    "enabled": true,
+    "boot": 4000,
+    "seed": 1
+  },
+  "created": "2026-10-02 12:11:58",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "matplotlib": "3.10.3"
+  }
+}

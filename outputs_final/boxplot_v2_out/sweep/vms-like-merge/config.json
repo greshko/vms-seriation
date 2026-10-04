@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "n_tokens": 38112,
+  "starts": [
+    0
+  ],
+  "window_len": 38112,
+  "wpf": [
+    370,
+    374,
+    378,
+    382,
+    386
+  ],
+  "bpq": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "metrics": [
+    "hellinger",
+    "js",
+    "l1"
+  ],
+  "restarts": 10,
+  "nmf_seeds": 5,
+  "k": [
+    5,
+    15
+  ],
+  "sa_mult": 200,
+  "seed": 42
+}

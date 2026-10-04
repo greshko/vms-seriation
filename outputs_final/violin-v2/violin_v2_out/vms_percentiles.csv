@@ -1,0 +1,12 @@
+statistic,value
+n_runs,24.0
+min,10.2
+median,14.28
+max,20.4
+median[metric=hellinger],12.24
+median[metric=js],14.79
+median[metric=l1],17.34
+central_90pct_lo,11.22
+central_90pct_hi,20.246999999999996
+central_50pct_lo,12.24
+central_50pct_hi,16.575

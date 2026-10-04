@@ -1,0 +1,6 @@
+group,n_runs,n_cells,icc,effective_n,vms_median,vms_runs,p_run_ge_vms_median,ci_naive_lo,ci_naive_hi,ci_cluster_lo,ci_cluster_hi,ci_reported_lo,ci_reported_hi,ci_with_vms_noise_lo,ci_with_vms_noise_hi,note,in_vms90_share,in_vms90_ci_lo,in_vms90_ci_hi,in_vms50_share,in_vms50_ci_lo,in_vms50_ci_hi
+Singulion,150,15,0.33207,37.60678,14.28,24,0.62,0.54024,0.69376,0.4665,0.77333,0.4665,0.77333,0.24,0.86,,0.80667,0.70667,0.89333,0.40667,0.29333,0.52667
+Binion,150,15,0.39024,33.24363,14.28,24,0.06667,0.03661,0.11836,0.00667,0.15333,0.00667,0.15333,0.0,0.25333,,0.28,0.12,0.44667,0.17333,0.05333,0.31333
+Ternion,150,15,0.44208,30.1283,14.28,24,0.05333,0.02727,0.1017,0.00667,0.12,0.00667,0.12,0.0,0.17333,,0.21333,0.10667,0.34,0.12,0.04667,0.21333
+Quaternion,150,15,0.31919,38.73221,14.28,24,0.0,0.0,0.02497,0.0,0.0,0.0,0.02497,0.0,0.04,none of the runs reaches the VMS median; upper end is the naive bound,0.03333,0.0,0.08667,0.02,0.0,0.06
+Quinion,150,15,0.13713,67.13972,14.28,24,0.0,0.0,0.02497,0.0,0.0,0.0,0.02497,0.0,0.02497,none of the runs reaches the VMS median; upper end is the naive bound,0.00667,0.0,0.03679,0.0,0.0,0.02497

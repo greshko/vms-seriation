@@ -1,0 +1,35 @@
+{
+  "input": "results_full_all.csv",
+  "vms_input": "results_full_vms.csv",
+  "vms_pattern": "voynich|vms",
+  "value_column": "carob",
+  "filters": {
+    "wpf": null,
+    "metrics": null,
+    "best_cost_only": false
+  },
+  "rows_input": 126000,
+  "rows_baseline": 126000,
+  "rows_vms": 24,
+  "n_texts": 35,
+  "groups": [
+    "Singulion",
+    "Binion",
+    "Ternion",
+    "Quaternion",
+    "Quinion"
+  ],
+  "alpha": 0.05,
+  "n_boot": 20000,
+  "seed": 42,
+  "vms_bands": [
+    50.0,
+    90.0
+  ],
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "matplotlib": "3.10.3"
+  }
+}

@@ -18,7 +18,7 @@ quires, used by the sweep to evaluate adjacency in the recovered ordering.
 
 Also exports:
   - random_baseline(foliation_df)
-      Analytical expected conjoint adjacency rate under a random ordering.
+      Analytical expected bifolio-adjacency rate under a random ordering.
 """
 
 import re
