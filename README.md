@@ -55,7 +55,7 @@ following conditions:
 
 > Greshko, Michael A. (2026). Algorithmic seriation of the Voynich Manuscript
 supports an all-singulion collation and yields a bifolium-level reordering
-of the entire codex. Submitted to the Second International Conference on the
+of the entire codex. The Second International Conference on the
 Voynich Manuscript 2026.
   
 THE SOFTWARE AND DATASETS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
