@@ -1,0 +1,27 @@
+,Voynich B,before theme,with line theme,held out?
+coh qok/ot family,1.1375,1.0017,1.1172,"theme feature, calibrated"
+coh word length,1.1189,1.0148,1.1369,"theme feature, calibrated"
+coh ends -y,1.1094,1.0419,1.1078,"theme feature, calibrated"
+coh has gallows,1.0798,1.0349,1.0875,"theme feature, spread set by hand"
+coh ends -l/-r,1.071,1.0592,1.1147,"theme feature, spread set by hand"
+coh -aiin/-ain,1.0347,1.0098,1.0672,not a theme feature (held out)
+coh opens ch/sh,0.9804,1.0322,1.023,not a theme feature (held out)
+len_1st,5.1249,5.1315,5.1305,
+len_2nd,4.5185,4.6377,4.6342,
+len_last,4.2667,4.5629,4.5504,
+m_last,0.2114,0.1482,0.1504,
+jsd_init,0.2669,0.2105,0.2081,
+jsd_final,0.1005,0.0643,0.0634,
+MI_boundary,0.2252,0.1567,0.1531,
+burstiness,0.8631,0.6551,0.6511,
+hapax,0.6741,0.4933,0.4978,
+ttr,0.2123,0.2225,0.2253,
+p_ed1,0.032,0.0336,0.0341,
+alpha,0.7162,0.678,0.725,
+h_tokens,109.0,105.3333,106.3333,
+h_in_repeats,37.0,29.3333,32.0,
+h_initial,2.0,1.3333,2.3333,
+zipf,-1.1081,-0.8043,-0.7935,held out
+H2,5.885,6.0271,6.0547,held out
+H3,7.6225,8.0077,8.0458,held out
+types,4925.0,5162.3333,5227.3333,held out

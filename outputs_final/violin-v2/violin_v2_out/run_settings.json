@@ -1,5 +1,5 @@
 {
-  "input": "results_full_all.csv",
+  "input": "results_full_all_carobcorrected.csv",
   "vms_input": "results_full_vms.csv",
   "vms_pattern": "voynich|vms",
   "value_column": "carob",
@@ -29,7 +29,7 @@
   "versions": {
     "pandas": "2.2.3",
     "numpy": "1.26.4",
-    "scipy": "1.13.1",
+    "scipy": "1.15.3",
     "matplotlib": "3.10.3"
   }
 }

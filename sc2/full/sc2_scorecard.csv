@@ -1,0 +1,22 @@
+,Voynich B,SC2 before fixes,SC2 fixed + retuned (3 seeds),held out?
+MI_boundary_excess,0.2252,0.1539,0.159,
+jsd_line_initial,0.2669,0.2008,0.2186,
+jsd_line_final,0.1005,0.0408,0.0571,
+ttr,0.2123,0.2785,0.3045,
+hapax_frac,0.6741,0.5406,0.5576,
+burstiness,0.8631,0.6846,0.6699,
+p_ed1,0.032,0.0223,0.0249,
+len_mean,4.6736,5.1411,5.3727,
+alpha_long,0.7162,0.7652,0.7066,
+types,4925.0,6461.0,7065.6667,held out
+zipf,-1.1081,-0.8123,-0.7933,held out
+H2,5.885,6.1187,6.1157,held out
+H3,7.6225,8.1506,8.1464,held out
+p_repeat,0.0092,0.0031,0.0029,held out
+MI_bound2_excess,0.2459,0.1388,0.1424,held out
+Mbar0,4.6484,,5.379,held out
+Mbar20,4.7531,,5.4797,held out
+Mbar_global,4.8097,,5.6152,held out
+p_final_m,0.1923,0.1047,0.1283,held out
+len_first,5.1125,5.2463,5.5254,held out
+len_last,4.365,5.1731,5.4599,held out

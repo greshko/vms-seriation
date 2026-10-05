@@ -1,0 +1,24 @@
+,Voynich B,SC2 (3 seeds)
+MI_boundary,0.2252,0.2254
+rep_all,0.0092,0.0095
+ed1,0.032,0.0317
+hapax_share_of_types,0.6741,0.5775
+types,4925.0,4430.3333
+burstiness,0.8631,0.675
+zipf,-1.1081,-0.8989
+H2,5.885,5.8947
+H3,7.6225,7.7645
+alpha,0.7162,0.6767
+len_1st,5.1249,5.1264
+len_2nd,4.5185,4.5739
+len_last,4.2667,4.563
+m_last,0.2114,0.1525
+jsd_init,0.2669,0.2118
+jsd_final,0.1005,0.0669
+coh_family,1.1487,1.1256
+coh_length,1.126,1.1327
+coh_y,1.1238,1.1318
+coh_chsh,0.9838,1.0063
+strict_concat,0.1861,0.2322
+gate_fail,0.1961,0.2376
+far_2plus,0.34,0.3369

@@ -267,7 +267,7 @@ def run_pairwise_wilcoxon(pivot: pd.DataFrame, groups: list[str],
         diffs = xa - xb
         try:
             stat, p = stats.wilcoxon(xa, xb, alternative="two-sided",
-                                     zero_method="wilcox", method="auto")
+                                     zero_method="wilcox", method="exact")
         except ValueError:
             stat, p = np.nan, np.nan
         nz = diffs[diffs != 0]
