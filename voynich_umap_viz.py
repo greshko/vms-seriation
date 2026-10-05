@@ -1,25 +1,32 @@
 """
 voynich_umap_viz.py
 ===================
-NMF topic modeling + UMAP dimensionality reduction + SVG seriation visualization
+NMF topic modeling + UMAP dimensionality reduction + seriation visualization
 for the Voynich Manuscript at the bifolio level.
 
 For each topic count K in K_VALUES:
   1. Fit NMF on bifolio-level token counts (bifolio_global as doc_id)
   2. Project the K-dimensional topic vectors to 2D via UMAP
-  3. Produce two SVG charts per K:
-       <K>_original.svg   — seriation line following original ordering
-       <K>_consensus.svg  — seriation line following consensus ordering
+  3. Produce ONE two-panel figure per K, sized for a single-column/full-width
+     paper figure:
+         (a) seriation path following the original (bound) bifolio ordering
+         (b) seriation path following the consensus seriation
+     Both panels share the same UMAP embedding, axes, and colorbar, so the
+     same bifolium sits at the same position in each panel.
   4. Write UMAP coordinates to umap_coords_K<K>.csv
 
-All outputs go to OUTPUT_DIR.
+Outputs (in OUTPUT_DIR):
+    figure3_K<K>.svg / .png      two-panel figure (a | b)
+    umap_coords_K<K>.csv         UMAP coordinates + NMF topic weights
 
 Usage
 -----
     python voynich_umap_viz.py
 
 Requires: numpy, pandas, scikit-learn, umap-learn, matplotlib
-Install:  pip install umap-learn matplotlib
+Optional: adjustText  (non-overlapping bifolium labels; falls back to simple
+          offset labels if it is not installed)
+Install:  pip install umap-learn matplotlib adjustText
 """
 
 from __future__ import annotations
@@ -27,23 +34,32 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib
-matplotlib.use("Agg")   # non-interactive backend; SVG output only
-import matplotlib.pyplot as plt
+matplotlib.use("Agg")   # non-interactive backend; file output only
 import matplotlib.colors as mcolors
-import matplotlib.cm as cm
+import matplotlib.patheffects as pe
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import umap
+from matplotlib.cm import ScalarMappable
+from matplotlib.collections import LineCollection
+from matplotlib.lines import Line2D
+from matplotlib.ticker import MaxNLocator
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.preprocessing import normalize
-import umap
+
+try:
+    from adjustText import adjust_text
+except ImportError:          # labels fall back to a fixed offset above each node
+    adjust_text = None
 
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
 
 FOLIATION_CSV   = Path("voynich/vms_rf1b_folio_bifolio.csv")
-CONSENSUS_CSV   = Path("voynich/consensus_vs_original.csv")
+CONSENSUS_CSV   = Path("outputs_final/consensus_seriation/consensus_vs_original.csv")
 OUTPUT_DIR      = Path("outputs/voynich_umap")
 
 K_VALUES        = [8, 12, 16, 20]   # topic counts to visualize
@@ -53,20 +69,39 @@ UMAP_SEED       = 42
 UMAP_N_NEIGHBORS = 10    # lower = more local structure
 UMAP_MIN_DIST    = 0.1
 
-# Visual parameters
-FIG_SIZE        = (9, 9)           # inches
-DPI             = 150              # only affects rasterized elements; SVG is vector
-NODE_SIZE       = 60               # scatter point size
+# ---- Output -----------------------------------------------------------------
+FORMATS         = ("svg", "png")   # file types to write
+PNG_DPI         = 600
+
+# ---- Figure geometry --------------------------------------------------------
+# Designed at the size it will be printed. 6.3 in is roughly the full text width
+# of the paper's page, so fonts below appear at their true point sizes when the
+# figure is included at \textwidth (do not rescale it much in the document).
+FIG_SIZE        = (6.3, 3.6)       # inches (width, height)
+
+# ---- Typography (points, at final size) -------------------------------------
+FONT_PANEL_LETTER = 11    # bold "a" / "b"
+FONT_TITLE        = 8.5   # panel titles
+FONT_AXIS_LABEL   = 8     # "UMAP 1", "UMAP 2", colorbar label
+FONT_TICK         = 7     # axis and colorbar tick labels
+FONT_LEGEND       = 7.5
+FONT_NODE_LABEL   = 6.0   # bifolium numbers next to nodes
+SHOW_NODE_LABELS  = True  # set False for an unlabeled version
+LEADER_MIN_PT     = 5     # draw a leader line if a label sits farther than this (pt) from its node
+
+# ---- Marks ------------------------------------------------------------------
+NODE_SIZE       = 12
 NODE_COLOR      = "#333333"
-NODE_ALPHA      = 0.85
-LABEL_FONTSIZE  = 7
-LINE_ALPHA      = 0.75
-LINE_WIDTH      = 1.5
-COLORMAP        = "plasma"         # gradient colormap for seriation line
-START_MARKER_SIZE = 140            # larger marker for bifolio 1
+NODE_ALPHA      = 0.9
+LINE_ALPHA      = 0.85
+LINE_WIDTH      = 1.1
+COLORMAP        = "plasma"         # gradient colormap for seriation path
+START_MARKER_SIZE = 75             # star marking bifolium 1
+END_MARKER_SIZE   = 42             # square marking final bifolium
+AXIS_PAD_FRAC   = 0.07             # padding around data extent
 
 # =============================================================================
-# HELPERS
+# DATA HELPERS
 # =============================================================================
 
 def load_bifolio_tokens(csv_path: Path) -> pd.DataFrame:
@@ -118,106 +153,202 @@ def load_orderings(consensus_csv: Path) -> tuple[list[int], list[int]]:
 
 
 # =============================================================================
-# SVG CHART
+# FIGURE
 # =============================================================================
 
-def make_svg(
-    umap_coords:  np.ndarray,        # (n_bifolios, 2)
-    bifolio_ids:  list[int],         # parallel to rows of umap_coords
-    ordering:     list[int],         # bifolio_global values in sequence order
-    title:        str,
-    out_path:     Path,
-    colormap:     str = COLORMAP,
-) -> None:
-    """
-    Produce one SVG chart:
-      - Scatter all bifolios in UMAP space (grey dots, labelled)
-      - Draw a gradient line following `ordering` from start to end
-      - Highlight bifolio 1 (forced start) with a distinct marker
-    """
-    bg_to_row = {bg: i for i, bg in enumerate(bifolio_ids)}
+def _draw_panel(
+    ax,
+    xy:          np.ndarray,          # (n_bifolios, 2) UMAP coordinates
+    bg_to_row:   dict[int, int],      # bifolio_global -> row in xy
+    ordering:    list[int],           # bifolio_global values in sequence order
+    cmap,
+    norm,
+) -> list[int]:
+    """Draw nodes, gradient seriation path, and start/end markers on one axes."""
+    valid = [bg for bg in ordering if bg in bg_to_row]
+    if len(valid) < 2:
+        print("  [warn] Fewer than two valid bifolios in ordering; panel left empty.")
+        return valid
 
-    # Only include bifolios that are both in ordering and in umap_coords
-    valid_ordering = [bg for bg in ordering if bg in bg_to_row]
-    if not valid_ordering:
-        print(f"  [warn] No valid bifolios in ordering for {out_path.name}; skipping.")
-        return
+    xs, ys = xy[:, 0], xy[:, 1]
+    path   = xy[[bg_to_row[bg] for bg in valid]]
 
-    xs = umap_coords[:, 0]
-    ys = umap_coords[:, 1]
+    # Gradient path as a single LineCollection; each segment is colored by the
+    # midpoint of the two ranks it connects (1.5, 2.5, ...).
+    segments = np.stack([path[:-1], path[1:]], axis=1)
+    lc = LineCollection(
+        segments, cmap=cmap, norm=norm,
+        linewidths=LINE_WIDTH, alpha=LINE_ALPHA,
+        capstyle="round", joinstyle="round", zorder=2,
+    )
+    lc.set_array(np.arange(1, len(valid)) + 0.5)
+    ax.add_collection(lc)
 
-    fig, ax = plt.subplots(figsize=FIG_SIZE, dpi=DPI)
-    ax.set_aspect("equal", adjustable="datalim")
-
-    # --- Background scatter: all bifolios ---
-    ax.scatter(xs, ys,
-               s=NODE_SIZE, color=NODE_COLOR, alpha=NODE_ALPHA,
+    # All bifolia as nodes
+    ax.scatter(xs, ys, s=NODE_SIZE, color=NODE_COLOR, alpha=NODE_ALPHA,
                zorder=3, linewidths=0)
 
-    # --- Labels ---
-    for bg, row in bg_to_row.items():
-        ax.annotate(
-            str(bg),
-            (xs[row], ys[row]),
-            fontsize=LABEL_FONTSIZE,
-            ha="center", va="bottom",
-            xytext=(0, 5), textcoords="offset points",
-            color="#555555", zorder=4,
-        )
+    # Start and end markers
+    ax.scatter(*path[0], s=START_MARKER_SIZE, color=cmap(0.0), marker="*",
+               edgecolors="white", linewidths=0.5, zorder=5)
+    ax.scatter(*path[-1], s=END_MARKER_SIZE, color=cmap(1.0), marker="s",
+               edgecolors="white", linewidths=0.5, zorder=5)
+    return valid
 
-    # --- Gradient seriation line ---
-    cmap   = cm.get_cmap(colormap)
-    n_segs = len(valid_ordering) - 1
 
-    for step in range(n_segs):
-        a_bg  = valid_ordering[step]
-        b_bg  = valid_ordering[step + 1]
-        a_row = bg_to_row[a_bg]
-        b_row = bg_to_row[b_bg]
-        t     = step / max(n_segs - 1, 1)   # 0.0 (start) -> 1.0 (end)
-        color = cmap(t)
-        ax.plot(
-            [xs[a_row], xs[b_row]],
-            [ys[a_row], ys[b_row]],
-            color=color, alpha=LINE_ALPHA,
-            linewidth=LINE_WIDTH, zorder=2,
-            solid_capstyle="round",
-        )
+def _label_nodes(axes, xy: np.ndarray, bifolio_ids: list[int]) -> None:
+    """
+    Number each node in every panel.
 
-    # --- Start marker (bifolio 1) ---
-    start_bg = valid_ordering[0]
-    if start_bg in bg_to_row:
-        sr = bg_to_row[start_bg]
-        ax.scatter(xs[sr], ys[sr],
-                   s=START_MARKER_SIZE, color=cmap(0.0),
-                   marker="*", zorder=5, linewidths=0,
-                   label=f"Start (bifolium {start_bg})")
+    Label positions are optimized once (adjustText, on the first panel) and then
+    reused in the other panels, so a given bifolium's label sits in the same
+    place in (a) and (b). Falls back to a fixed offset above each node if
+    adjustText is not installed.
+    """
+    halo = [pe.withStroke(linewidth=1.6, foreground="white")]
+    leader = dict(arrowstyle="-", color="#777777", lw=0.3, shrinkA=0, shrinkB=1)
+    xs, ys = xy[:, 0], xy[:, 1]
 
-    # --- End marker ---
-    end_bg = valid_ordering[-1]
-    if end_bg in bg_to_row:
-        er = bg_to_row[end_bg]
-        ax.scatter(xs[er], ys[er],
-                   s=START_MARKER_SIZE * 0.7, color=cmap(1.0),
-                   marker="s", zorder=5, linewidths=0,
-                   label=f"End (bifolium {end_bg})")
+    if adjust_text is None:
+        for ax in axes:
+            for bg, x, y in zip(bifolio_ids, xs, ys):
+                ax.annotate(
+                    str(bg), (x, y), xytext=(0, 3), textcoords="offset points",
+                    ha="center", va="bottom", fontsize=FONT_NODE_LABEL,
+                    color="#222222", zorder=6, path_effects=halo,
+                )
+        return
 
-    # --- Colorbar as gradient reference ---
-    sm = cm.ScalarMappable(cmap=cmap, norm=mcolors.Normalize(vmin=1, vmax=len(valid_ordering)))
+    ax0 = axes[0]
+    texts = [
+        ax0.text(x, y, str(bg), ha="center", va="center",
+                 fontsize=FONT_NODE_LABEL, color="#222222",
+                 zorder=6, path_effects=halo)
+        for bg, x, y in zip(bifolio_ids, xs, ys)
+    ]
+    adjust_text(
+        texts, x=xs, y=ys, ax=ax0,
+        expand=(1.15, 1.35),
+        force_text=(0.3, 0.5), force_static=(0.5, 0.8),
+        min_arrow_len=LEADER_MIN_PT,
+        arrowprops=leader,
+    )
+    final_pos = [t.get_position() for t in texts]
+
+    # Reuse the optimized positions in the remaining panels.
+    for ax in axes[1:]:
+        for bg, (x, y), (tx, ty) in zip(bifolio_ids, xy, final_pos):
+            d_px = ax.transData.transform((tx, ty)) - ax.transData.transform((x, y))
+            d_pt = float(np.hypot(*d_px)) * 72.0 / ax.figure.dpi
+            ax.annotate(
+                str(bg), xy=(x, y), xytext=(tx, ty), textcoords="data",
+                ha="center", va="center", fontsize=FONT_NODE_LABEL,
+                color="#222222", zorder=6, path_effects=halo,
+                arrowprops=leader if d_pt > LEADER_MIN_PT else None,
+                annotation_clip=False,
+            )
+
+
+def make_figure(
+    embedding:       np.ndarray,       # (n_bifolios, 2)
+    bifolio_ids:     list[int],        # parallel to rows of embedding
+    original_order:  list[int],
+    consensus_order: list[int],
+    K:               int,
+    out_stem:        Path,             # path without extension
+) -> None:
+    """
+    Two-panel figure: (a) original ordering | (b) consensus seriation.
+    Axes, axis labels, and colorbar are shared between panels.
+    """
+    plt.rcParams.update({
+        "font.size":        FONT_TICK,
+        "axes.linewidth":   0.6,
+        "xtick.major.width": 0.6,
+        "ytick.major.width": 0.6,
+        "xtick.major.size":  2.5,
+        "ytick.major.size":  2.5,
+        "xtick.major.pad":   2,
+        "ytick.major.pad":   2,
+    })
+
+    bg_to_row = {bg: i for i, bg in enumerate(bifolio_ids)}
+    cmap = matplotlib.colormaps[COLORMAP]
+    norm = mcolors.Normalize(vmin=1, vmax=len(original_order))
+
+    fig, axes = plt.subplots(
+        1, 2, figsize=FIG_SIZE, sharex=True, sharey=True,
+        layout="constrained",
+    )
+    fig.get_layout_engine().set(w_pad=0.04, h_pad=0.03, wspace=0.04)
+
+    # Shared axis limits (identical node positions in both panels)
+    lo, hi = embedding.min(axis=0), embedding.max(axis=0)
+    pad    = (hi - lo) * AXIS_PAD_FRAC
+    axes[0].set_xlim(lo[0] - pad[0], hi[0] + pad[0])
+    axes[0].set_ylim(lo[1] - pad[1], hi[1] + pad[1])
+
+    panels = [
+        ("a", "Original ordering",    original_order),
+        ("b", "Consensus seriation",  consensus_order),
+    ]
+    for ax, (letter, title, order) in zip(axes, panels):
+        _draw_panel(ax, embedding, bg_to_row, order, cmap, norm)
+
+        ax.set_title(title, loc="left", fontsize=FONT_TITLE,
+                     fontweight="bold", pad=5)
+        ax.annotate(letter, xy=(0, 1), xycoords="axes fraction",
+                    xytext=(-3, 5), textcoords="offset points",
+                    ha="right", va="bottom",
+                    fontsize=FONT_PANEL_LETTER, fontweight="bold")
+
+        ax.xaxis.set_major_locator(MaxNLocator(nbins=5, integer=True))
+        ax.yaxis.set_major_locator(MaxNLocator(nbins=5, integer=True))
+        ax.tick_params(labelsize=FONT_TICK)
+        for side in ("top", "right"):
+            ax.spines[side].set_visible(False)
+
+    # Consolidated axis labels: one x label centered under both panels, one
+    # y label at the far left. (Inner y tick labels are hidden by sharey.)
+    fig.supxlabel("UMAP 1", fontsize=FONT_AXIS_LABEL)
+    fig.supylabel("UMAP 2", fontsize=FONT_AXIS_LABEL)
+
+    # One shared colorbar for both panels
+    sm = ScalarMappable(norm=norm, cmap=cmap)
     sm.set_array([])
-    cbar = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.02)
-    cbar.set_label("Seriation rank", fontsize=9)
+    n = len(original_order)
+    cbar = fig.colorbar(sm, ax=axes, location="right", fraction=0.035,
+                        pad=0.015, aspect=22)
+    cbar.set_label("Seriation rank", fontsize=FONT_AXIS_LABEL, labelpad=3)
+    cbar.set_ticks([1, 10, 20, 30, 40, n])
+    cbar.ax.tick_params(labelsize=FONT_TICK, width=0.6, length=2.5)
+    cbar.outline.set_linewidth(0.6)
 
-    ax.set_title(title, fontsize=11, pad=10)
-    ax.set_xlabel("UMAP 1", fontsize=9)
-    ax.set_ylabel("UMAP 2", fontsize=9)
-    ax.tick_params(labelsize=8)
-    ax.legend(fontsize=8, loc="lower right")
+    # One shared legend for the start/end markers (above the panels)
+    handles = [
+        Line2D([], [], marker="*", linestyle="none", markersize=8,
+               markerfacecolor=cmap(0.0), markeredgecolor="white",
+               markeredgewidth=0.5, label="Start (bifolium 1)"),
+        Line2D([], [], marker="s", linestyle="none", markersize=5,
+               markerfacecolor=cmap(1.0), markeredgecolor="white",
+               markeredgewidth=0.5, label="End"),
+    ]
+    fig.legend(handles=handles, loc="outside upper right", ncol=2,
+               frameon=False, fontsize=FONT_LEGEND, handletextpad=0.2,
+               columnspacing=1.2, borderaxespad=0.0)
 
-    fig.tight_layout()
-    fig.savefig(out_path, format="svg", bbox_inches="tight")
+    # Number the nodes only after layout is final, so label placement is
+    # computed against the real axes size.
+    if SHOW_NODE_LABELS:
+        fig.canvas.draw()
+        _label_nodes(axes, embedding, bifolio_ids)
+
+    for ext in FORMATS:
+        path = out_stem.with_suffix(f".{ext}")
+        kwargs = {"dpi": PNG_DPI} if ext == "png" else {}
+        fig.savefig(path, format=ext, facecolor="white", **kwargs)
+        print(f"    Saved: {path.name}")
     plt.close(fig)
-    print(f"    Saved: {out_path.name}")
 
 
 # =============================================================================
@@ -294,24 +425,15 @@ def main() -> None:
         coords_df.to_csv(coords_path, index=False)
         print(f"  Coordinates -> {coords_path.name}")
 
-        # SVG: original ordering
-        print(f"  Plotting original ordering ...")
-        make_svg(
-            umap_coords = embedding,
-            bifolio_ids = bifolio_ids,
-            ordering    = original_order,
-            title       = f"VMS bifolium sequence — original ordering  (K={K})",
-            out_path    = OUTPUT_DIR / f"K{K}_original.svg",
-        )
-
-        # SVG: consensus ordering
-        print(f"  Plotting consensus ordering ...")
-        make_svg(
-            umap_coords = embedding,
-            bifolio_ids = bifolio_ids,
-            ordering    = consensus_order,
-            title       = f"VMS bifolium sequence — consensus seriation  (K={K})",
-            out_path    = OUTPUT_DIR / f"K{K}_consensus.svg",
+        # Two-panel figure: (a) original | (b) consensus
+        print(f"  Plotting two-panel figure ...")
+        make_figure(
+            embedding       = embedding,
+            bifolio_ids     = bifolio_ids,
+            original_order  = original_order,
+            consensus_order = consensus_order,
+            K               = K,
+            out_stem        = OUTPUT_DIR / f"figure3_K{K}",
         )
 
     print("\nDone.")
