@@ -17,9 +17,8 @@ per-text (outputs/<stem>/results_full.csv etc.) and combined across all texts
 (outputs/results_full_all.csv, outputs/results_summary_all.csv,
 outputs/results_viz_all.html).
 
-UPDATE (2026/10/04): Deprecated for uses other than providing seriation
-pipeline to voynich_folio.py and voynich_bifolio.py. sweep_v2.py contains
-correction to random baseline calcuation for calculating conjoint adjacency
+NOTE: Use for conducting seriation only. sweep_v2.py contains correct version of 
+random baseline calcuation for calculating conjoint adjacency
 ratio over baseline (CAROB).
 
 Configuration
