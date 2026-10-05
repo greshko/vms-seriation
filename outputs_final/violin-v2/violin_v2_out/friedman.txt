@@ -1,1 +1,1 @@
-Friedman omnibus across 5 groups (N=35 paired texts): chi2=130.649, df=4, p=2.82812e-27
+Friedman omnibus across 5 groups (N=35 paired texts): chi2=129.358, df=4, p=5.34144e-27

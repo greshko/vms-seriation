@@ -8,8 +8,8 @@
     "metrics": null,
     "best_cost_only": false
   },
-  "rows_input": 126000,
-  "rows_baseline": 126000,
+  "rows_input": 210000,
+  "rows_baseline": 210000,
   "rows_vms": 24,
   "n_texts": 35,
   "groups": [
@@ -30,6 +30,6 @@
     "pandas": "2.2.3",
     "numpy": "1.26.4",
     "scipy": "1.15.3",
-    "matplotlib": "3.10.3"
+    "matplotlib": "3.10.9"
   }
 }
