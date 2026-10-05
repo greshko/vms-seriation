@@ -2,7 +2,7 @@
 
 No cipher, no plaintext. Every token is still produced by copying a token written earlier
 (mostly on the same page, preferring nearby lines) and optionally mutating it, as in
-Timm & Schinner (2019). What changes is how the scribe *chooses* among options:
+Timm & Schinner (2020). What changes is how the scribe *chooses* among options:
 
   1. propose K candidates  (source selection x mutation operator)
   2. score each candidate  [shape(w) > floor]                  word-internal well-formedness gate
