@@ -13,7 +13,7 @@ Adding to the manuscript’s mysteries, the binding of the
 15th-century Voynich Manuscript (VMS) probably does not reflect its 
 originally intended page ordering. Recently, 
 a computational analysis of the VMS’s 
-Biological (ff. 75--84) and Stars (ff. 103--116) sections suggested 
+Biological (ff. 75–84) and Stars (ff. 103–116) sections suggested 
 that the VMS may have been structured originally 
 as consecutive loose bifolia that each acted 
 as individual quires (singulions). In this work, I test this hypothesis 
