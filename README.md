@@ -3,7 +3,7 @@
 This repository contains code and datasets associated with the paper:
 
 > Greshko, Michael A. (2026). Algorithmic seriation of the Voynich Manuscript
-is most consistent with an all-singulion collation and yields a bifolium-level reordering
+is most consistent with an all-singulion collation and suggests a bifolium-level reordering
 of the codex. Accepted to the Second International Conference on the
 Voynich Manuscript 2026.
   
