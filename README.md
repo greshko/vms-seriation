@@ -1,4 +1,4 @@
-# Algorithmic seriation of the entire Voynich Manuscript
+# Algorithmic seriation of the Voynich Manuscript
 
 This repository contains code and datasets associated with the paper:
 
