@@ -35,6 +35,8 @@ of the Biological and Stars sections.
 
 You can view the proposed reordering here: https://vceditor.library.upenn.edu/project/6a6f5e5fef56250001215924/viewOnly
 
+This repository also includes a JSON file of the reordering compatible with Voynich Viewer: https://voynichviewer.com/
+
 # License and copyright
 
 Unless otherwise indicated, the source code contained in
