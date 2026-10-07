@@ -1,0 +1,174 @@
+{
+ "app": "voynich-viewer",
+ "version": 1,
+ "exported": "2026-10-07T11:48:50.478Z",
+ "crops": {},
+ "orders": [
+  {
+   "id": "my-muy1nwnfvhho",
+   "title": "Greshko: bifolium-level consensus seriation",
+   "from": "Davis: complete proposed order",
+   "gatherings": [
+    {
+     "quire": 1,
+     "type": "singulions",
+     "bifolia": [
+      "1|8",
+      "35|38",
+      "42|47",
+      "27|30",
+      "49|56",
+      "20|21"
+     ]
+    },
+    {
+     "quire": 2,
+     "type": "singulions",
+     "bifolia": [
+      "2|7",
+      "25|32",
+      "28|29",
+      "4|5"
+     ]
+    },
+    {
+     "quire": 3,
+     "type": "singulions",
+     "bifolia": [
+      "9|16",
+      "36|37",
+      "19|22"
+     ]
+    },
+    {
+     "quire": 4,
+     "type": "singulions",
+     "bifolia": [
+      "10|15",
+      "11|14",
+      "12|13",
+      "18|23",
+      "44|45"
+     ]
+    },
+    {
+     "quire": 5,
+     "type": "singulions",
+     "bifolia": [
+      "17|24",
+      "3|6",
+      "52|53",
+      "51|54"
+     ]
+    },
+    {
+     "quire": 6,
+     "type": "singulions",
+     "bifolia": [
+      "93|96",
+      "87|90",
+      "100|101",
+      "99|102",
+      "88|89"
+     ]
+    },
+    {
+     "quire": 7,
+     "type": "singulions",
+     "bifolia": [
+      "58|65"
+     ]
+    },
+    {
+     "quire": 8,
+     "type": "singulions",
+     "bifolia": [
+      "69|70"
+     ]
+    },
+    {
+     "quire": 9,
+     "type": "singulions",
+     "bifolia": [
+      "71|72"
+     ]
+    },
+    {
+     "quire": 10,
+     "type": "singulions",
+     "bifolia": [
+      "73|74"
+     ]
+    },
+    {
+     "quire": 11,
+     "type": "singulions",
+     "bifolia": [
+      "67|68"
+     ],
+     "sheets": {
+      "67|68": {
+       "spine": 1
+      }
+     }
+    },
+    {
+     "quire": 12,
+     "type": "singulions",
+     "bifolia": [
+      "57|66"
+     ]
+    },
+    {
+     "quire": 13,
+     "type": "singulions",
+     "bifolia": [
+      "26|31",
+      "41|48",
+      "43|46",
+      "34|39",
+      "33|40",
+      "50|55",
+      "94|95"
+     ]
+    },
+    {
+     "quire": 14,
+     "type": "singulions",
+     "bifolia": [
+      "85|86"
+     ]
+    },
+    {
+     "quire": 15,
+     "type": "singulions",
+     "bifolia": [
+      "105|114",
+      "104|115",
+      "106|113",
+      "107|112",
+      "108|111",
+      "103|116"
+     ]
+    },
+    {
+     "quire": 16,
+     "type": "singulions",
+     "bifolia": [
+      "76|83",
+      "77|82",
+      "79|80",
+      "75|84",
+      "78|81"
+     ]
+    }
+   ],
+   "unplaced": [
+    "109|110"
+   ],
+   "updated": "2026-10-07T11:48:45.196Z"
+  }
+ ],
+ "bookmarks": [],
+ "viewer": "1.4"
+}
