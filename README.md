@@ -27,7 +27,7 @@ quire structures, I seriate the VMS at the folio
 level. The rate at which the VMS’s conjoint folia end
 up adjacent in a topic-distance seriation is most consistent with the
 VMS being made entirely of singulions, although controls indicate this
-adjacency signal does not require the VMS to be meaningful.
+adjacency signal can arise in both meaningful text and gibberish.
 Presupposing an all-singulion collation, I also propose 
 a bifolium-level reordering of the VMS’s surviving bifolia that 
 converges with previously proposed reorderings 
