@@ -26,9 +26,9 @@ synthetic collations of diverse Latin texts while varying
 quire structures, I seriate the VMS at the folio 
 level. The rate at which the VMS’s conjoint folia end
 up adjacent in a topic-distance seriation is most consistent with the
-VMS being made entirely of singulions, although controls indicate this 
-adjacency signal does not depend on whether 
-the VMS is meaningful. Presupposing an all-singulion collation, I also propose 
+VMS being made entirely of singulions, although controls indicate this
+adjacency signal does not require the VMS to be meaningful.
+Presupposing an all-singulion collation, I also propose 
 a bifolium-level reordering of the VMS’s surviving bifolia that 
 converges with previously proposed reorderings 
 of the Biological and Stars sections.
