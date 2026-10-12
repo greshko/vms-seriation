@@ -2,8 +2,8 @@
 
 This repository contains code and datasets associated with the paper:
 
-> Greshko, Michael A. (2026). Algorithmic seriation of the Voynich Manuscript
-is most consistent with an all-singulion collation and suggests a bifolium-level reordering
+> Greshko, Michael A. (2026). Algorithmic seriation suggests the Voynich Manuscript
+is most consistent with an all-singulion collation, informing a bifolium-level reordering
 of the codex. Accepted to the Second International Conference on the
 Voynich Manuscript 2026.
   
@@ -24,11 +24,11 @@ an ensemble of nonnegative matrix factorization topic modeling runs.
 After baselining the algorithm’s performance by seriating 
 synthetic collations of diverse Latin texts while varying 
 quire structures, I seriate the VMS at the folio 
-level. The VMS’s observed rate of conjoint folia becoming adjacent 
-pairs within a topic-distance seriation is most consistent with the 
-VMS being made of entirely singulions, although controls indicate this 
-adjacency signal does not depend on whether 
-the VMS is meaningful. Presupposing an all-singulion collation, I also propose 
+level. The rate at which the VMS’s conjoint folia end
+up adjacent in a topic-distance seriation is most consistent with the
+VMS being made entirely of singulions, although controls indicate this
+adjacency signal can arise in both meaningful text and gibberish.
+Presupposing an all-singulion collation, I also propose 
 a bifolium-level reordering of the VMS’s surviving bifolia that 
 converges with previously proposed reorderings 
 of the Biological and Stars sections.
@@ -59,8 +59,8 @@ following conditions:
 - Any publications making use of the Software and Datasets, or any substantial
   portions thereof, shall cite the Software and Datasets's original publication:
 
-> Greshko, Michael A. (2026). Algorithmic seriation of the Voynich Manuscript
-is most consistent with an all-singulion collation and suggests a bifolium-level reordering
+> Greshko, Michael A. (2026). Algorithmic seriation suggests the Voynich Manuscript
+is most consistent with an all-singulion collation, informing a bifolium-level reordering
 of the codex. Accepted to the Second International Conference on the
 Voynich Manuscript 2026.
   
