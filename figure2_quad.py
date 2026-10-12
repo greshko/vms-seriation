@@ -1,3 +1,31 @@
+# Copyright (c) 2026, Michael A. Greshko
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software, datasets, and associated documentation files (the "Software
+# and Datasets"), to deal in the Software and Datasets without restriction,
+# including without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software and Datasets, and to
+# permit persons to whom the Software is furnished to do so, subject to the
+# following conditions:
+# 
+# - The above copyright notice and this permission notice shall be included
+#   in all copies or substantial portions of the Software and Datasets.
+# - Any publications making use of the Software and Datasets, or any substantial
+#   portions thereof, shall cite the Software and Datasets's original publication:
+# 
+# > Greshko, Michael A. (2026). Algorithmic seriation suggests the Voynich
+#   Manuscript is most consistent with an all-singulion collation, informing
+#   a bifolium-level reordering of the codex. Accepted to the Second International
+#   Conference on the Voynich Manuscript 2026.
+#   
+# THE SOFTWARE AND DATASETS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+# EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE AND DATASETS.
+
 """
 figure2_quad.py -- Figure 2 as four panels (a-d), box plots throughout.
 
