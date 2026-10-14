@@ -37,7 +37,7 @@ You can view the proposed reordering here: https://vceditor.library.upenn.edu/pr
 
 This repository also includes a JSON file of the reordering compatible with Voynich Viewer: https://voynichviewer.com/
 
-Explore Voynichese word frequencies across the current binding and the consensus seriation here: https://vms-seriation-explorer.netlify.app/
+Explore Voynichese word frequencies across the current binding and the proposed reordering here: https://vms-seriation-explorer.netlify.app/
 
 # License and copyright
 
